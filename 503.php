@@ -20,10 +20,10 @@ get_header(); ?>
 					Serwis www jest chwilowo niedostępny. Pracujemy nad tym, żeby jak najszybciej do Was wrócić. Dziękujemy za cierpliwość.
 				</p>
 				<p class="mb-4">
-					A tymczasem możesz dowiedzieć się więcej o Akademii Przyszłości:
+					
 				</p>
 
-				<a href="www.pl" class="btn btn-red btn-lg">Przejdź na www.alumi.com.pl ></a>
+				<a href="www.pl" class="btn btn-red btn-lg"></a>
 			</div>
 		</div>
 	</div>
