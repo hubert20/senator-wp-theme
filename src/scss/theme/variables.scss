@@ -2,16 +2,16 @@
 // #Colors
 // ------------------------------------ //
 
-$orange: #f47729;
+$yellow: #fed510;
 
 // Definiowanie nazw jako stringów
 $names: (
-    "orange"
+    "yellow"
 );
 
 // Mapowanie nazw na kolory
 $colors: (
-    "orange": $orange
+    "yellow": $yellow
 );
 
 @each $name in $names {

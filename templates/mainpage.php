@@ -10,11 +10,11 @@ get_header();
 <!-- Main hero -->
 <?php get_template_part('template-parts/main-hero'); ?>
 
-<!-- Main banner shop -->
-<?php get_template_part('template-parts/main-banner-shop'); ?>
+<!-- Main products slider -->
+<?php get_template_part('template-parts/main-products-slider'); ?>
 
-<!-- Main realizations -->
-<?php get_template_part('template-parts/main-realizations'); ?>
+<!-- Main about senator -->
+<?php get_template_part('template-parts/main-about'); ?>
 
 <?php
 while (have_posts()) : the_post();

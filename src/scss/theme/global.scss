@@ -1,17 +1,17 @@
 // Top Menu
-.home #top-header {
-    @include media-breakpoint-up(xl) {
-        background-color: rgba(0, 0, 0, .2);
+// .home #top-header {
+//     @include media-breakpoint-up(xl) {
+//         background-color: rgba(0, 0, 0, .2);
 
-        .top-header-menu {
-            border-bottom: 1px solid rgba(255, 255, 255, .1);
-        }
-    }
-}
+//         .top-header-menu {
+//             border-bottom: 1px solid rgba(255, 255, 255, .1);
+//         }
+//     }
+// }
 
-#top-header {
-    background-color: #232323;
-}
+// #top-header {
+//     background-color: #232323;
+// }
 
 
 @include media-breakpoint-down(md) {
@@ -58,7 +58,7 @@
             .navbar-brand {
                 &.top-logo {
                     img {
-                        width: 165px;
+                        width: 75px;
                     }
                 }
             }
@@ -91,7 +91,7 @@
             transition: 0.3s ease-in-out;
 
             @include media-breakpoint-up(xl) {
-                width: 165px;
+                width: 75px;
             }
         }
 
@@ -115,7 +115,7 @@
     .navbar-nav {
         >li {
             >a {
-                color: #fff;
+                color: #000;
                 text-transform: uppercase;
                 z-index: 0;
 
@@ -511,12 +511,6 @@
         margin: 0 0 0 20px;
         text-decoration: none !important;
     }
-}
-
-//Top Toolbar
-.toolbar-area {
-    // border-bottom: 1px solid rgba(0, 0, 0, 0.1);
-    background-color: #000;
 }
 
 .contact-info {
