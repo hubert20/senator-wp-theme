@@ -2,18 +2,38 @@ require("bootstrap");
 import Swiper from "swiper"
 import { Navigation } from 'swiper/modules'
 
+Swiper.use([Navigation]);
 
 (function () {
-  var swiper = new Swiper(".swiper-container", {
-    modules: [Navigation],
-    speed: 400,
-    autoplay: true,
-    loop: true,
-    navigation: {
-      nextEl: ".swiper-button-next",
-      prevEl: ".swiper-button-prev",
+const swiper = new Swiper('.swiper-main-products', {
+  // Default parameters
+  slidesPerView: 1,
+  spaceBetween: 10,
+  loop: true,
+  navigation: {
+    nextEl: ".swiper-button-next",
+    prevEl: ".swiper-button-prev",
+  },
+  // Responsive breakpoints
+  breakpoints: {
+    // when window width is >= 320px
+    320: {
+      slidesPerView: 1,
+      spaceBetween: 20
     },
-  });
+    // when window width is >= 480px
+    480: {
+      slidesPerView: 3,
+      spaceBetween: 30
+    },
+    // when window width is >= 640px
+    640: {
+      slidesPerView: 4,
+      spaceBetween: 40
+    }
+  }
+})
+
 
   window.addEventListener('scroll', (event) => {
     var btnscroll = document.querySelector('#top-header');
@@ -86,19 +106,4 @@ import { Navigation } from 'swiper/modules'
       document.getElementById('video').setAttribute('src', videoSrc);
     });
   }
-  //Cart
-  // Sprawdzenie, czy element z klasą .cartcontents istnieje
-  // const cartContents = document.querySelector(".cartcontents");
-  // if (cartContents) {
-  //   cartContents.textContent = cartContents.textContent.replace("produktów", "").trim();
-  //   cartContents.textContent = cartContents.textContent.replace("produkty", "").trim();
-  //   cartContents.textContent = cartContents.textContent.replace("produkt", "").trim();
-  // }
-
-  // // Sprawdzenie, czy element z klasą .wpmenucart-contents istnieje
-  // const wpMenuCartContents = document.querySelector("#wpmenucartli .wpmenucart-contents");
-  // if (wpMenuCartContents) {
-  //   wpMenuCartContents.classList.add("nav-link");
-  // }
-
 })();

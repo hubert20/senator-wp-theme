@@ -24,8 +24,8 @@ $hero_background_mobile = get_field('hero_background_mobile');
         </div>
     </div>
 
-
     <!-- Hero Cnt -->
+     <?php /*
     <div class="container top-hero__cnt position-relative">
         <!-- Hero slider -->
         <div class="top-hero__slider py-5 py-lg-0">
@@ -64,6 +64,7 @@ $hero_background_mobile = get_field('hero_background_mobile');
 
         </div>
     </div>
+*/ ?>
     <!-- Scroll Anchor-->
     <a href="#iframe-hauses" class="tst-scroll-hint-frame tst-anchor-scroll">
         <div class="tst-scroll-hint"></div>

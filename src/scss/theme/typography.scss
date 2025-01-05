@@ -2,27 +2,30 @@
 // #Typography rules
 // ------------------------------------ //
 
-@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=Chakra+Petch:ital,wght@0,300;0,400;0,500;0,600;0,700;1,300;1,400;1,500;1,600;1,700&display=swap');;
+@import url('https://fonts.googleapis.com/css2?family=Dosis:wght@200..800&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Playfair:ital,opsz,wght@0,5..1200,300..900;1,5..1200,300..900&display=swap');
 
 //Montserrat
-$montserrat-font-family: "Montserrat", sans-serif;
+//$montserrat-font-family: "Montserrat", sans-serif;
 
-// Teko
-$Chakra-Petch-family: "Chakra Petch", sans-serif;
+//Dosis
+$dosis-font-family: "Dosis", serif;
 
-.montserrat-font {
-  font-family: $montserrat-font-family !important;
+//Playfair
+$playfair-family: "Playfair", serif;
+
+.dosis-font {
+  font-family: $dosis-font-family !important;
 }
 
-.chakra-petch-font {
-  font-family: $Chakra-Petch-family !important;
+.playfair-petch-font {
+  font-family: $playfair-family !important;
 }
 
 html,
 body {
   background: white;
-  font-family: $montserrat-font-family;
+  font-family: $dosis-font-family;
 }
 
 .lh-11 {

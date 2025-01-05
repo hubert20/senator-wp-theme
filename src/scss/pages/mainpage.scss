@@ -150,3 +150,23 @@
     /* Microsoft Edge */
     color: rgba(255, 255, 255, .8);
 }
+
+// Swiper main products slider 
+.main-products-slider {
+    &__item{
+        &:after {
+            content: '';
+            height: 100%;
+            width: 100%;
+            background-image: linear-gradient(to top, $yellow, transparent, transparent);
+            z-index: 0;
+            position: absolute;
+            // transform: translateY(100%);
+            // -webkit-transform: translateY(100%);
+            bottom: 0;
+        }
+        &--title {
+            position: absolute;
+        }
+    }
+}
