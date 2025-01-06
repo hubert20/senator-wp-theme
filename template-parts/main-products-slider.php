@@ -1,5 +1,5 @@
 <!-- Slider with products -->
-<section class="py-4 main-products-slider p-relative px-lg-4">
+<section class="main-products-slider p-relative p-4">
     <h2 class="text-center mb-4 mb-lg-5 playfair-petch-font standard-title-4">Systemy drzwi przesuwnych i szaf garderobianych</h2>
     <div class="swiper swiper-main-products">
         <div class="swiper-wrapper">
@@ -10,7 +10,7 @@
             ?>
                     <div class="swiper-slide">
                         <a href="<?php echo esc_url(get_permalink()); ?>" class="main-products-slider__item position-relative text-decoration-none d-block" title="<?php echo esc_attr(get_the_title()); ?>">
-                        <h3 class="main-products-slider__item--title text-center text-white playfair-petch-font"><?php the_title(); ?></h3>
+                            <h3 class="main-products-slider__item--title text-decoration-none d-block text-white standard-title-6 text-center playfair-petch-font"><?php the_title(); ?></h3>
                             <?php if (has_post_thumbnail()) : ?>
                                 <?php the_post_thumbnail('large', ['class' => 'img-fluid']); ?>
                             <?php endif; ?>
@@ -20,7 +20,9 @@
                 wp_reset_postdata();
             endif; ?>
         </div>
-        <div class="swiper-button-next"></div>
-        <div class="swiper-button-prev"></div>
+    </div>
+    <div class="position-relative d-flex align-items-center justify-content-center">
+        <div class="swiper-main-products__prev swiper-button-prev"></div>
+        <div class="swiper-main-products__next swiper-button-next"></div>
     </div>
 </section>

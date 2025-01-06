@@ -7,18 +7,18 @@ $hero_background_mobile = get_field('hero_background_mobile');
     <div class="container">
         <div class="row align-items-center justify-content-center">
             <div class="col-lg-3">
-                <img src="http://localhost:81/wordpress/wp-content/uploads/2025/01/Port-additional-img-1.jpg" id="slide-1" class="img-fluid" alt="">
-                <img src="http://localhost:81/wordpress/wp-content/uploads/2025/01/Port-additional-img-4.jpg" id="slide-2" class="img-fluid" alt="">
+                <img src="http://localhost:81/wordpress/wp-content/uploads/2025/01/Port-additional-img-1.jpg" id="slide-1" class="img-fluid d-none" alt="">
+                <img src="http://localhost:81/wordpress/wp-content/uploads/2025/01/Port-additional-img-4.jpg" id="slide-2" class="img-fluid d-none" alt="">
                 <img src="http://localhost:81/wordpress/wp-content/uploads/2025/01/Port-additional-img-6.jpg" id="slide-3" class="img-fluid" alt="">
             </div>
             <div class="col-lg-5">
-                <img src="http://localhost:81/wordpress/wp-content/uploads/2025/01/home-6-port-2.jpg" id="slide-4" class="img-fluid" alt="">
-                <img src="http://localhost:81/wordpress/wp-content/uploads/2025/01/home-6-port-5.jpg" id="slide-5" class="img-fluid" alt="">
+                <img src="http://localhost:81/wordpress/wp-content/uploads/2025/01/home-6-port-2.jpg" id="slide-4" class="img-fluid d-none" alt="">
+                <img src="http://localhost:81/wordpress/wp-content/uploads/2025/01/home-6-port-5.jpg" id="slide-5" class="img-fluid d-none" alt="">
                 <img src="http://localhost:81/wordpress/wp-content/uploads/2025/01/home-6-port-8.jpg" id="slide-6" class="img-fluid" alt="">
             </div>
             <div class="col-lg-3">
-                <img src="http://localhost:81/wordpress/wp-content/uploads/2025/01/Port-additional-img-2.jpg" id="slide-7" class="img-fluid" alt="">
-                <img src="http://localhost:81/wordpress/wp-content/uploads/2025/01/Port-additional-img-3.jpg" id="slide-8" class="img-fluid" alt="">
+                <img src="http://localhost:81/wordpress/wp-content/uploads/2025/01/Port-additional-img-2.jpg" id="slide-7" class="img-fluid d-none" alt="">
+                <img src="http://localhost:81/wordpress/wp-content/uploads/2025/01/Port-additional-img-3.jpg" id="slide-8" class="img-fluid d-none" alt="">
                 <img src="http://localhost:81/wordpress/wp-content/uploads/2025/01/Port-additional-img-5.jpg" id="slide-9" class="img-fluid" alt="">
             </div>
         </div>
