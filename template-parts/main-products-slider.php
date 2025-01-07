@@ -10,6 +10,9 @@
             ?>
                     <div class="swiper-slide">
                         <a href="<?php echo esc_url(get_permalink()); ?>" class="main-products-slider__item position-relative text-decoration-none d-block" title="<?php echo esc_attr(get_the_title()); ?>">
+                            <span class="main-products-slider__item--btn">
+                                <span>Czytam opis ></span>
+                            </span>
                             <h3 class="main-products-slider__item--title text-decoration-none d-block text-white standard-title-6 text-center playfair-petch-font"><?php the_title(); ?></h3>
                             <?php if (has_post_thumbnail()) : ?>
                                 <?php the_post_thumbnail('large', ['class' => 'img-fluid']); ?>

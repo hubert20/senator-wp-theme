@@ -154,6 +154,8 @@
 // Swiper main products slider 
 .main-products-slider {
     &__item {
+        position: relative;
+
         &:after {
             content: '';
             height: 100%;
@@ -161,18 +163,13 @@
             background-image: linear-gradient(to top, #C49863, transparent, transparent);
             z-index: 0;
             position: absolute;
-            transition: all .35s cubic-bezier(0, 0, 0.2, 1);
-            -webkit-transition: all .35s cubic-bezier(0, 0, 0.2, 1);
+            transition: all 0.35s cubic-bezier(0, 0, 0.2, 1);
             transform: translateY(100%);
-            -webkit-transform: translateY(100%);
             left: 0;
         }
 
-        &:hover {
-            &:after {
-                transform: translateY(0);
-                -webkit-transform: translateY(0);
-            }
+        &:hover:after {
+            transform: translateY(0);
         }
 
         &::before {
@@ -181,12 +178,12 @@
             height: 92%;
             z-index: 99;
             position: absolute;
-            left: 0;
-            right: 0;
             top: 0;
             bottom: 0;
+            left: 0;
+            right: 0;
             margin: auto;
-            border: 1px solid rgba(255, 255, 255, .5);
+            border: 1px solid rgba(255, 255, 255, 0.5);
         }
 
         &--title {
@@ -196,8 +193,47 @@
             width: 100%;
             font-weight: 600;
         }
+
+        &--btn {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            margin: auto;
+            z-index: 0;
+            opacity: 0;
+            transform: scale(0.8) translateY(30px);
+            transition: all 0.35s cubic-bezier(0, 0, 0.2, 1);
+
+            & > span {
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                padding: 15px;
+                width: clamp(5rem, 4.5rem + 2.5vw, 7.5rem);
+                height: clamp(5rem, 4.5rem + 2.5vw, 7.5rem);
+                line-height: 1.2;
+                border-radius: 50%;
+                border: 0;
+                background-color: #fff;
+                color: red;
+                transition: all 0.3s linear;
+            }
+        }
+
+        &:hover {
+           & > span {
+                transform: scale(1) translateY(0);
+                opacity: 1;
+            }
+        }
     }
 }
+
 
 //Swiper arrows
 .swiper-main-products {
