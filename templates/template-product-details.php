@@ -25,7 +25,7 @@ $bg_header_image = get_field('bg_header_image');
 
 
 <div class="container">
-    <div class="row">
+    <div class="row mb-4 mb-lg-5">
         <div class="col-lg-6">
             <!-- Gallery slider -->
             <?php if (have_rows('slider')) : ?>
