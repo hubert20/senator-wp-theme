@@ -19,14 +19,14 @@ $bg_header_image = get_field('bg_header_image');
         </h1>
         <?php
         if (function_exists('yoast_breadcrumb')) {
-            yoast_breadcrumb('<p id="breadcrumbs" class="mb-0 breadcrumbs text-center dosis-font fw-bold">', '</p>');
+            yoast_breadcrumb('<p id="breadcrumbs" class="mb-0 breadcrumbs text-center dosis-font fw-light">', '</p>');
         }
         ?>
     </div>
 </section>
 <div class="container">
     <div class="row mb-4 mb-lg-5">
-        <div class="col-lg-6">
+        <div class="col-lg-6 mb-3 mb-lg-0">
             <!-- Gallery slider -->
             <?php if (have_rows('slider')) : ?>
                 <div class="row">
@@ -50,7 +50,7 @@ $bg_header_image = get_field('bg_header_image');
     </div>
 
     <!-- tabs profil -->
-    <ul class="nav nav-tabs mt-1 mb-2 mt-lg-4 mb-lg-4 justify-content-center" id="pills-tab" role="tablist">
+    <ul class="nav nav-tabs mt-1 mb-2 mt-lg-4 mb-lg-4 justify-content-center playfair-petch-font" id="pills-tab" role="tablist">
         <!-- Kolory profili nav-tabs -->
         <li class="nav-item p-1 p-lg-0 col">
             <a class="nav-link text-center active" id="color-profil-tab" data-bs-toggle="pill" href="#color-profil" role="tab" aria-controls="color-profil" aria-selected="true">Kolory profili</a>
@@ -76,12 +76,16 @@ $bg_header_image = get_field('bg_header_image');
                         $title_color = get_sub_field('title');
                         $image_color = get_sub_field('image');
                     ?>
-                        <div class="col-lg-3 text-center">
-                            <div class="color-profil__item text-center mb-2 p-2">
-                                <?php if ($image_color) : ?>
-                                    <img src="<?php echo $image_color['url']; ?>" alt="<?php echo $image_color['alt']; ?>" class="img-fluid mx-auto">
-                                <?php endif; ?>
-                                <p class="mb-0"><?php echo $title_color; ?></p>
+                        <div class="col-4 col-md-2 text-center">
+                            <div class="row justify-content-center">
+                                <div class="col-lg-9 text-center mb-2">
+                                    <div class="color-profil__item text-center mb-2 p-2">
+                                        <?php if ($image_color) : ?>
+                                            <img src="<?php echo $image_color['url']; ?>" alt="<?php echo $image_color['alt']; ?>" class="img-fluid mx-auto">
+                                        <?php endif; ?>
+                                    </div>
+                                    <p class="mb-0 lh-13"><?php echo $title_color; ?></p>
+                                </div>
                             </div>
                         </div>
                     <?php endwhile; ?>
@@ -97,7 +101,7 @@ $bg_header_image = get_field('bg_header_image');
                         $title_filling = get_sub_field('title');
                         $image_filling = get_sub_field('image');
                     ?>
-                        <div class="col-lg-3 text-center">
+                        <div class="col-lg-2 text-center">
                             <div class="filling-profil__item text-center mb-2 p-2">
                                 <?php if ($image_filling) : ?>
                                     <img src="<?php echo $image_filling['url']; ?>" alt="<?php echo $image_filling['alt']; ?>" class="img-fluid mx-auto mb-2">
