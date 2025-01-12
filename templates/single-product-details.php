@@ -1,10 +1,12 @@
 <?php
 if (!defined('ABSPATH')) exit;
 
-/* Template Name: Template product details */
+/* 
+Template Name: Template product details 
+Template Post Type: post
+*/
 
 get_header();
-
 
 $bg_header_image = get_field('bg_header_image');
 
@@ -51,15 +53,15 @@ $bg_header_image = get_field('bg_header_image');
     <ul class="nav nav-tabs mt-1 mb-2 mt-lg-4 mb-lg-4 justify-content-center" id="pills-tab" role="tablist">
         <!-- Kolory profili nav-tabs -->
         <li class="nav-item p-1 p-lg-0 col">
-            <a class="nav-link text-center active" id="color-profil-tab" data-toggle="pill" href="#color-profil" role="tab" aria-controls="color-profil" aria-selected="false">Kolory profili</a>
+            <a class="nav-link text-center active" id="color-profil-tab" data-bs-toggle="pill" href="#color-profil" role="tab" aria-controls="color-profil" aria-selected="true">Kolory profili</a>
         </li>
         <!-- Wypełnienia profili nav-tabs -->
         <li class="nav-item p-1 p-lg-0 col">
-            <a class="nav-link text-center active" id="filling-profil-tab" data-toggle="pill" href="#filling-profil" role="tab" aria-controls="filling-profil" aria-selected="true">Wypełnienia profili</a>
+            <a class="nav-link text-center" id="filling-profil-tab" data-bs-toggle="pill" href="#filling-profil" role="tab" aria-controls="filling-profil" aria-selected="false">Wypełnienia profili</a>
         </li>
         <!-- Konfiguracje nav-tabs -->
         <li class="nav-item p-1 p-lg-0 col">
-            <a class="nav-link text-center" id="config-profil-tab" data-toggle="pill" href="#config-profil" role="tab" aria-controls="config-profil" aria-selected="true">Konfiguracje</a>
+            <a class="nav-link text-center" id="config-profil-tab" data-bs-toggle="pill" href="#config-profil" role="tab" aria-controls="config-profil" aria-selected="false">Konfiguracje</a>
         </li>
     </ul>
 
@@ -75,11 +77,11 @@ $bg_header_image = get_field('bg_header_image');
                         $image_color = get_sub_field('image');
                     ?>
                         <div class="col-lg-3 text-center">
-                            <div class="color-profil__item text-center">
+                            <div class="color-profil__item text-center mb-2 p-2">
                                 <?php if ($image_color) : ?>
                                     <img src="<?php echo $image_color['url']; ?>" alt="<?php echo $image_color['alt']; ?>" class="img-fluid mx-auto">
                                 <?php endif; ?>
-                                <?php echo $title_color; ?>
+                                <p class="mb-0"><?php echo $title_color; ?></p>
                             </div>
                         </div>
                     <?php endwhile; ?>
@@ -96,11 +98,11 @@ $bg_header_image = get_field('bg_header_image');
                         $image_filling = get_sub_field('image');
                     ?>
                         <div class="col-lg-3 text-center">
-                            <div class="filling-profil__item text-center">
+                            <div class="filling-profil__item text-center mb-2 p-2">
                                 <?php if ($image_filling) : ?>
-                                    <img src="<?php echo $image_filling['url']; ?>" alt="<?php echo $image_filling['alt']; ?>" class="img-fluid mx-auto">
+                                    <img src="<?php echo $image_filling['url']; ?>" alt="<?php echo $image_filling['alt']; ?>" class="img-fluid mx-auto mb-2">
                                 <?php endif; ?>
-                                <?php echo $title_filling; ?>
+                                <p class="mb-0"><?php echo $title_filling; ?></p>
                             </div>
                         </div>
                     <?php endwhile; ?>

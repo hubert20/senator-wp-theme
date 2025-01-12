@@ -247,3 +247,17 @@ function wp_senator_widgets_init()
 
 add_action('widgets_init', 'wp_senator_widgets_init');
 add_filter('widget_text', 'do_shortcode');
+
+
+
+add_filter( 'single_template', function( $single ) {
+  global $post;
+
+  if ( in_category( 'szafy-przesuwne', $post ) ) {
+      if ( file_exists( get_template_directory() . '/single-product-details.php' ) ) {
+          return get_template_directory() . '/single-product-details.php';
+      }
+  }
+
+  return $single;
+});
