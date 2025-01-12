@@ -10,7 +10,7 @@ $bg_header_image = get_field('bg_header_image');
 
 ?>
 <!-- Hero top -->
-<section class="d-flex flex-column align-items-center justify-content-center header-image-defeault mb-4 mb-lg-5">
+<section class="d-flex flex-column align-items-center justify-content-center header-image-defeault mb-4 mb-lg-5" style="background-image: url('<?php echo $bg_header_image; ?>')">
     <div class="container">
         <h1 class="playfair-petch-font standard-title-3 fw-bold text-center text-white header-def-title">
             <?php the_title(); ?>
@@ -22,8 +22,6 @@ $bg_header_image = get_field('bg_header_image');
         ?>
     </div>
 </section>
-
-
 <div class="container">
     <div class="row mb-4 mb-lg-5">
         <div class="col-lg-6">
@@ -34,7 +32,7 @@ $bg_header_image = get_field('bg_header_image');
                     while (have_rows('slider')) : the_row();
                         $image_slider = get_sub_field('image');
                     ?>
-
+                        <img src="<?php echo $image_slider['url']; ?>" alt="<?php echo $image_slider['alt']; ?>" class="img-fluid mx-auto">
                     <?php endwhile; ?>
                 </div>
             <?php endif; ?>
@@ -48,8 +46,6 @@ $bg_header_image = get_field('bg_header_image');
             ?>
         </div>
     </div>
-
-
 
     <!-- tabs profil -->
     <ul class="nav nav-tabs mt-1 mb-2 mt-lg-4 mb-lg-4 justify-content-center" id="pills-tab" role="tablist">
@@ -118,6 +114,17 @@ $bg_header_image = get_field('bg_header_image');
 
         </div>
     </div>
+
+    <!-- CTA btns -->
+    <div class="row justify-content-center">
+        <div class="col-lg-6 mb-3 mb-lg-0">
+            <a href="" class="" title="">Zobacz wszystkie systemy SENATOR</a>
+        </div>
+        <div class="col-lg-6">
+            <a data-togle="bs-modal" class="" title="">Wyślij zapytanie/złóż zamówienie</a>
+        </div>
+    </div>
+
 </div>
 
 <?php get_footer(); ?>
