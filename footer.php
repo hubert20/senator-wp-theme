@@ -11,10 +11,30 @@
  */
 ?>
 
-<?php if (!is_page('sklep')) : ?>
-    <?php get_template_part('template-parts/main-jobs'); ?>
-    <?php get_template_part('template-parts/main-form'); ?>
-<?php endif; ?>
+
+<!-- Offer form Modal -->
+<div class="modal fade" id="offerformModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal-dialog modal-lg modal-dialog-centered">
+        <div class="modal-content">
+            <div class="modal-header d-flex py-1 justify-content-between border-0">
+                <img src="/wp-content/uploads/2023/05/logo-hatek.png" alt="hatek.com.pl" class="img-fluid p-1" style="height: 35px;">
+                <button type="button" class="btn-close btn-close-dark" data-bs-dismiss="modal" aria-label="Close">
+                    <span aria-hidden="true"></span>
+                </button>
+            </div>
+            <div class="modal-body" id="modal-form">
+                <div class="modal-form-cnt" data-category-type="pomoc-organizacji">
+                    <div class="row">
+                        <div class="col-lg-7">
+                            <?php echo apply_shortcodes('[contact-form-7 id="38" title="Formularz wyceny konstrukcji"]'); ?>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
 <footer class="site-footer" role="contentinfo">
     <?php get_template_part('footer-widget'); ?>
 </footer>
