@@ -26,7 +26,7 @@
                 <div class="modal-form-cnt" data-category-type="pomoc-organizacji">
                     <div class="row">
                         <div class="col-lg-7">
-                            <?php echo apply_shortcodes('[contact-form-7 id="38" title="Formularz wyceny konstrukcji"]'); ?>
+                            <?php echo apply_shortcodes('[contact-form-7 id="38" title="Formularz oferty"]'); ?>
                         </div>
                     </div>
                 </div>
