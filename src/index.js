@@ -106,4 +106,7 @@ const swiper = new Swiper('.swiper-main-products', {
       document.getElementById('video').setAttribute('src', videoSrc);
     });
   }
+      // Add data-toggle to link menu
+    $('#menu-item-178').find('a').attr('data-bs-toggle', 'modal');
+    $('#menu-item-178').find('a').attr('data-bs-target', '#offerformModal');
 })();
