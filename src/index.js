@@ -107,6 +107,9 @@ const swiper = new Swiper('.swiper-main-products', {
     });
   }
       // Add data-toggle to link menu
-    $('#menu-item-178').find('a').attr('data-bs-toggle', 'modal');
-    $('#menu-item-178').find('a').attr('data-bs-target', '#offerformModal');
+      var menuItem = document.querySelector('#menu-item-126 a');
+      if (menuItem) {
+          menuItem.setAttribute('data-bs-toggle', 'modal');
+          menuItem.setAttribute('data-bs-target', '#offerformModal');
+      }
 })();

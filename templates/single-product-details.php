@@ -8,7 +8,7 @@ Template Post Type: post
 
 get_header();
 
-$bg_header_image = get_field('bg_header_image');
+$bg_header_image = get_field('background_product');
 
 ?>
 <!-- Hero top -->

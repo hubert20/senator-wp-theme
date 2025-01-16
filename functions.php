@@ -248,8 +248,6 @@ function wp_senator_widgets_init()
 add_action('widgets_init', 'wp_senator_widgets_init');
 add_filter('widget_text', 'do_shortcode');
 
-
-
 add_filter( 'single_template', function( $single ) {
   global $post;
 
@@ -261,3 +259,15 @@ add_filter( 'single_template', function( $single ) {
 
   return $single;
 });
+
+add_filter('wpseo_breadcrumb_links', 'custom_remove_category_base_from_breadcrumbs');
+
+function custom_remove_category_base_from_breadcrumbs($links) {
+    foreach ($links as &$link) {
+        if (strpos($link['url'], '/category/') !== false) {
+            // Usuń fragment 'category' z URL
+            $link['url'] = str_replace('/category/', '/', $link['url']);
+        }
+    }
+    return $links;
+}

@@ -13,6 +13,10 @@
 //     background-color: #232323;
 // }
 
+.toolbar-area {
+    background: #000;
+    border-top: 5px solid $yellow;
+}
 
 @include media-breakpoint-down(md) {
     .navbar-collapse {
@@ -23,7 +27,6 @@
 }
 
 // Tom menu with sticky
-
 .home #top-header {
     &.sticky {
         @include media-breakpoint-up(xl) {
@@ -31,7 +34,6 @@
         }
     }
 }
-
 
 #top-header {
     .navbar-address {
@@ -115,7 +117,7 @@
     .navbar-nav {
         >li {
             >a {
-                color: #000;
+                color: #fff;
                 text-transform: uppercase;
                 z-index: 0;
 
@@ -134,7 +136,7 @@
                             position: absolute;
                             left: 0;
                             top: 50%;
-                            background-color: $orange;
+                            background-color: $yellow;
                             transition: 0.3s ease-in-out;
                             z-index: -1;
                             transform: translateY(-45%) skew(-23deg, 0deg);
@@ -384,7 +386,7 @@
         color: #434343;
     }
 
-    border-bottom: 6px solid $orange;
+    border-bottom: 6px solid $yellow;
 }
 
 .bottom-nav-menu {
@@ -631,55 +633,16 @@
     }
 }
 
-// Header defeault
-.header-image-defeault {
-    position: relative;
-    z-index: 0;
-
-    @include media-breakpoint-up(xl) {
-        min-height: 350px;
-    }
-
-    min-height: 250px;
-    background-image: url('/wp-content/uploads/2024/10/top-header-img-bg-min.jpg');
-    background-size: cover;
-    background-position: center;
-
-    &:before {
-        position: absolute;
-        width: 100%;
-        height: 100%;
-        background-color: #121212;
-        opacity: .86;
-        mix-blend-mode: darken;
-        transition: background .3s, border-radius .3s, opacity .3s;
-        content: "";
-        z-index: -1;
-    }
-}
-
-.page-id-70 {
-    .header-image-defeault {
-        background-image: url('/wp-content/uploads/2024/10/klimatyzacja-top-bg-min.jpg');
-    }
-}
-
-.page-id-66 {
-    .header-image-defeault {
-        background-image: url('/wp-content/uploads/2024/10/alternator-top-bg-min.jpg');
-    }
-}
-
 //breadcrumbs
 .breadcrumbs {
-    color: $orange;
+    color: $yellow;
 
     a {
         color: #fff;
     }
 
     .breadcrumb_last {
-        color: $orange;
+        color: $yellow;
     }
 }
 
@@ -688,84 +651,6 @@
 .page-template-template-defeault-product,
 .page-template-template-contact {
     background-color: #232323;
-}
-
-//Page alternatory
-.failure-alternator {
-    background: #efefef;
-
-    &__item {
-        background-color: rgba(0, 0, 0, .1);
-        clip-path: polygon(15px 0, 100% 0, 100% calc(100% - 15px), calc(100% - 15px) 100%, 0 100%, 0 15px);
-        overflow: hidden;
-        position: relative;
-
-        &:after {
-            content: "";
-            position: absolute;
-            top: 2px;
-            left: 2px;
-            right: 2px;
-            bottom: 2px;
-            background: #efefef;
-            clip-path: polygon(14px 0, 100% 0, 100% calc(100% - 14px), calc(100% - 14px) 100%, 0 100%, 0 14px);
-            z-index: -1;
-            transition: .2s cubic-bezier(0.24, 0.74, 0.58, 1);
-        }
-    }
-
-    &__item-title {
-        font-size: 22px;
-    }
-
-    &__point {
-        background-color: #f47729;
-        clip-path: polygon(15px 0, 100% 0, 100% calc(100% - 15px), calc(100% - 15px) 100%, 0 100%, 0 15px);
-        overflow: hidden;
-        position: relative;
-        display: inline-block;
-
-        &:after {
-            content: "";
-            position: absolute;
-            top: 2px;
-            left: 2px;
-            right: 2px;
-            bottom: 2px;
-            background: $orange;
-            clip-path: polygon(14px 0, 100% 0, 100% calc(100% - 14px), calc(100% - 14px) 100%, 0 100%, 0 14px);
-            z-index: -1;
-            transition: .2s cubic-bezier(0.24, 0.74, 0.58, 1);
-        }
-    }
-}
-
-// Box style orange 
-.box-style-orange {
-    background-color: #f47729;
-    clip-path: polygon(15px 0, 100% 0, 100% calc(100% - 15px), calc(100% - 15px) 100%, 0 100%, 0 15px);
-    overflow: hidden;
-    position: relative;
-
-    &:after {
-        content: "";
-        position: absolute;
-        top: 2px;
-        left: 2px;
-        right: 2px;
-        bottom: 2px;
-        background: #232323;
-        clip-path: polygon(14px 0, 100% 0, 100% calc(100% - 14px), calc(100% - 14px) 100%, 0 100%, 0 14px);
-        z-index: -1;
-        transition: .2s cubic-bezier(0.24, 0.74, 0.58, 1);
-    }
-}
-
-.box-style-dark {
-    background-color: #121212;
-    clip-path: polygon(15px 0, 100% 0, 100% calc(100% - 15px), calc(100% - 15px) 100%, 0 100%, 0 15px);
-    overflow: hidden;
-    position: relative;
 }
 
 //Icon logo lightning
@@ -810,7 +695,7 @@
             height: 110%;
             width: 110%;
             line-height: 110px;
-            background: #f47729;
+            background: $yellow;
             border-radius: 50%;
             z-index: -1;
             animation: pulse-border 1500ms ease-out infinite;

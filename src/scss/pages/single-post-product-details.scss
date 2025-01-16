@@ -1,5 +1,34 @@
-// Color profil
+// Top header bg
+// Header defeault
+.header-image-defeault {
+    position: relative;
+    z-index: 0;
 
+    @include media-breakpoint-up(xl) {
+        min-height: 450px;
+    }
+
+    min-height: 250px;
+    background-image: url('/wp-content/uploads/2024/10/top-header-img-bg-min.jpg');
+    background-size: cover;
+    background-position: center;
+
+    &:before {
+        position: absolute;
+        width: 100%;
+        height: 100%;
+        background-color: #121212;
+        opacity: .46;
+        mix-blend-mode: darken;
+        transition: background .3s, border-radius .3s, opacity .3s;
+        content: "";
+        z-index: -1;
+    }
+}
+
+
+
+// Color profil
 .color-profil {
     &__item {
         border: 1px solid rgba(0, 0, 0, .1);
