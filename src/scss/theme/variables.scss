@@ -36,7 +36,6 @@ $colors: (
     }
 }
 
-
 //Custom Btn
 .btn {
     font-size: 18px;
@@ -61,9 +60,9 @@ $colors: (
 .btn.btn--style-2 {
     font-size: 18px;
     line-height: 1.3em;
-    background-color: #d16527;
+    background-color: $yellow;
     padding: 18px 39px 15px;
-    border: 2px solid #d16527;
+    border: 2px solid $yellow;
     clip-path: polygon(20px 0, 100% 0, 100% calc(100% - 20px), calc(100% - 20px) 100%, 0 100%, 0 20px);
     font-family: chakra petch, sans-serif
 }
@@ -108,7 +107,7 @@ $colors: (
 //Btn style 3
 .btn.btn--style-3 {
     line-height: 1.1em;
-    background-color: $orange;
+    background-color: $yellow;
     padding: 11px 20px 10.5px;
     clip-path: polygon(15px 0, 100% 0, 100% calc(100% - 15px), calc(100% - 15px) 100%, 0 100%, 0 15px);
     overflow: hidden;
@@ -153,7 +152,7 @@ $colors: (
 
 .btn.btn--style-3:hover {
     clip-path: polygon(0 0, 100% 0, 100% calc(100% - 15px), 100% 100%, 0 100%, 0 15px);
-    color: $orange;
+    color: $yellow;
 }
 
 .btn.btn--style-3:hover:before {
@@ -173,7 +172,7 @@ $colors: (
 }
 
 .btn-orange {
-    background-color: $orange;
+    background-color: $yellow;
     color: #fff;
 }
 
