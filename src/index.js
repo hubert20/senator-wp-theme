@@ -34,17 +34,6 @@ const swiper = new Swiper('.swiper-main-products', {
   }
 })
 
-
-  window.addEventListener('scroll', (event) => {
-    var btnscroll = document.querySelector('#top-header');
-    var scrollValue = window.pageYOffset || document.documentElement.scrollTop;
-    if (scrollValue > 0) {
-      btnscroll.classList.add("sticky");
-    } else {
-      btnscroll.classList.remove("sticky");
-    }
-  });
-
   // Scroll Counter number
   var counted = 0;
   window.addEventListener('scroll', function () {
@@ -84,28 +73,7 @@ const swiper = new Swiper('.swiper-main-products', {
     }
   });
 
-  // Open film in modal
-  // Open YouTube testimonials in modal
-  const modalVid = document.getElementById('video-sg');
-  if (modalVid) {
-    let videoSrc;
-    // Zbierz wszystkie przyciski wideo i dodaj nasłuchiwanie kliknięć
-    document.querySelectorAll('.video-btn').forEach(button => {
-      button.addEventListener('click', function () {
-        videoSrc = this.getAttribute('data-src');
-      });
-    });
 
-    // Kiedy modal się otwiera
-    document.getElementById('ModalVideo').addEventListener('shown.bs.modal', function () {
-      document.getElementById('video').setAttribute('src', `${videoSrc}?modestbranding=1&rel=0&controls=1&showinfo=0&html5=1&autoplay=1`);
-    });
-
-    // Kiedy modal się zamyka
-    document.getElementById('ModalVideo').addEventListener('hide.bs.modal', function () {
-      document.getElementById('video').setAttribute('src', videoSrc);
-    });
-  }
       // Add data-toggle to link menu
       var menuItem = document.querySelector('#menu-item-126 a');
       if (menuItem) {

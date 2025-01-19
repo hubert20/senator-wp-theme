@@ -1,13 +1,23 @@
-// Top Menu
-// .home #top-header {
-//     @include media-breakpoint-up(xl) {
-//         background-color: rgba(0, 0, 0, .2);
+//Bg Body
+.post-template {
+    background-color: rgb(16, 16, 16);
+    background-image: url('http://localhost:81/wordpress/wp-content/uploads/2025/01/body-bg.png');
+}
 
-//         .top-header-menu {
-//             border-bottom: 1px solid rgba(255, 255, 255, .1);
-//         }
-//     }
-// }
+//Top Menu
+#top-header {
+    @include media-breakpoint-up(xl) {
+        // background-color: rgba(0, 0, 0, .2);
+
+        .top-header-menu {
+            // border-bottom: 1px solid rgba(255, 255, 255, .1);
+            position: absolute;
+            top: 58px;
+            width: 100%;
+            z-index: 9;
+        }
+    }
+}
 
 // #top-header {
 //     background-color: #232323;
@@ -26,62 +36,10 @@
     }
 }
 
-// Tom menu with sticky
-.home #top-header {
-    &.sticky {
-        @include media-breakpoint-up(xl) {
-            background-color: rgba(0, 0, 0, .6);
-        }
-    }
-}
-
 #top-header {
     .navbar-address {
         @media screen and (min-width: 1700px) {
             font-size: 18px;
-        }
-    }
-
-    &.sticky {
-
-        transition: 0.3s ease-in-out;
-
-        @include media-breakpoint-up(xl) {
-            margin-top: 0;
-
-            .top-header-menu {
-                max-width: 100%;
-                transition: 0.3s ease-in-out;
-                // background-color: #fff;
-                // box-shadow: 0 0 16px rgba(50, 50, 50, 0.2);
-                position: relative;
-            }
-
-            .navbar-brand {
-                &.top-logo {
-                    img {
-                        width: 60px;
-                    }
-                }
-            }
-        }
-
-        .navbar-nav {
-            >li {
-                >a {
-                    @include media-breakpoint-up(xl) {
-                        // color: #000;
-                        font-size: 14px;
-                        text-shadow: none;
-                        // padding: 0.2rem 0.7rem;
-                        // letter-spacing: 0.1em;
-
-                        // &:before {
-                        //     top: 45px;
-                        // }
-                    }
-                }
-            }
         }
     }
 }
@@ -151,7 +109,7 @@
                 text-align: center;
 
                 &:hover {
-                    color: #fff;
+                    color: #000;
 
                     &:before {
                         width: 100%;
@@ -521,7 +479,7 @@
     list-style: none;
 
     li {
-        line-height: 35px;
+        line-height: 37px;
         border-right: 1px solid rgba(255, 255, 255, 0.2);
         font-size: 14px;
         letter-spacing: .5px;
@@ -765,5 +723,83 @@
 
     100% {
         border-color: #fff;
+    }
+}
+
+// Offer Modal
+
+.offerformModal {
+    .round-close {
+        position: absolute;
+        right: -18px;
+        top: -18px;
+        background: #fed510;
+        display: inline-block;
+        width: 40px;
+        height: 40px;
+        border-radius: 50%;
+    }
+
+    .label-select,
+    .form-select {
+        color: rgba(255, 255, 255, .6);
+    }
+
+    &.show {
+        background: rgba(0, 0, 0, 0.5);
+    }
+
+    .modal-content {
+        background-color: rgb(16, 16, 16);
+        background-image: url('http://localhost:81/wordpress/wp-content/uploads/2025/01/body-bg.png');
+    }
+
+    &__left-bg {
+        background-color: rgb(16, 16, 16);
+        background-image: url('http://localhost:81/wordpress/wp-content/uploads/2025/01/body-bg.png');
+        border-radius: 0.5rem 0 0 0.5rem;
+    }
+
+    &__right-bg {
+        background-image: url('http://localhost:81/wordpress/wp-content/uploads/2025/01/senator-system-otwarty-main-min.jpg');
+        background-size: cover;
+        border-radius: 0 0.5rem 0.5rem 0;
+    }
+
+    .form-control {
+        background-color: #2b2b2b;
+        border-color: #2b2b2b;
+        border-radius: 0;
+    }
+
+    .wpcf7-list-item-label {
+        color: #ccc;
+        font-size: 13px;
+        line-height: 1.3;
+        display: inline-block;
+    }
+
+    .modal-body .btn-close {
+        position: absolute;
+        right: 0;
+        top: -30px;
+        z-index: 999;
+        font-size: 1.4rem !important;
+        font-weight: 400 !important;
+        color: #fff;
+        opacity: 1;
+
+        @media (min-width: 1199px) {
+            right: -15px;
+            top: -15px;
+        }
+    }
+
+    .wpcf7-submit {
+        border: none;
+        background-color: $yellow;
+        color: #000 !important;
+        padding: .475rem .75rem;
+        border-radius: 0;
     }
 }

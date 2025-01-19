@@ -13,20 +13,21 @@
 
 
 <!-- Offer form Modal -->
-<div class="modal fade" id="offerformModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+<div class="modal fade offerformModal" id="offerformModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
     <div class="modal-dialog modal-lg modal-dialog-centered">
         <div class="modal-content">
-            <div class="modal-body" id="modal-form">
-                <div class="modal-form-cnt">
-                    <div class="row">
-                        <div class="col-lg-6">
-                            <?php echo apply_shortcodes('[contact-form-7 id="38" title="Formularz oferty"]'); ?>
+            <div class="modal-body p-0" id="modal-form">
+                <div class="d-flex">
+                    <div class="col-lg-6 offerformModal__left-bg">
+                        <div class="p-4">
+                            <?php echo apply_shortcodes('[contact-form-7 id="7c3e932" title="Formularz oferty"]'); ?>
                         </div>
-                        <div class="col-lg-6 d-none d-lg-flex modal-form-cnt__right-bg">
-                            <button type="button" class="btn-close btn-close-dark" data-bs-dismiss="modal" aria-label="Close">
-                                <span aria-hidden="true"></span>
-                            </button>
-                        </div>
+                    </div>
+                    <div class="col-lg-6 d-none d-lg-flex offerformModal__right-bg">
+                        <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal" aria-label="Close">
+                            <span aria-hidden="true"></span>
+                        </button>
+                        <span class="round-close"></span>
                     </div>
                 </div>
             </div>

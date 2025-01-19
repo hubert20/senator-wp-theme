@@ -35,3 +35,30 @@
         box-shadow: 0 0 12px rgba(0, 0, 0, .1);
     }
 }
+
+.tabs-details-nav {
+    .nav-item {
+        .nav-link {
+            position: relative;
+            border: 0;
+            font-size: 24px;
+            color: #fff;
+
+            &.active {
+                background-color: transparent;
+                color: $yellow;
+                border: 0;
+
+                &:after {
+                    content: '';
+                    border-bottom: 4px solid $yellow;
+                    width: 100%;
+                    position: absolute;
+                    left: 0;
+                    bottom: -1px;
+                    border-radius: 5px 5px 0 0;
+                }
+            }
+        }
+    }
+}

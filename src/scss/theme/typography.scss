@@ -170,22 +170,10 @@ a:active {
   text-decoration: none;
 }
 
-.title-stroke {
-  color: transparent;
-  &--dark {
-    text-stroke-color: #242424;
-    -webkit-text-stroke-color: #242424;
-    text-stroke-width: 2px;
-    -webkit-text-stroke-width: 2px;
-  }
+.ls-1 {
+  letter-spacing: 1px;
 }
 
-.title-stroke {
-  color: transparent;
-  &--white {
-    text-stroke-color: rgba(255,255,255, .3);
-    -webkit-text-stroke-color: rgba(255,255,255, .3);
-    text-stroke-width: 2px;
-    -webkit-text-stroke-width: 2px;
-  }
+.ls-2 {
+  letter-spacing: 2px;
 }

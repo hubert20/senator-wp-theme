@@ -14,8 +14,8 @@ $bg_header_image = get_field('background_product');
 <!-- Hero top -->
 <section class="d-flex flex-column align-items-center justify-content-center header-image-defeault mb-4 mb-lg-5" style="background-image: url('<?php echo $bg_header_image; ?>')">
     <div class="container">
-        <h1 class="playfair-petch-font standard-title-3 fw-bold text-center text-white header-def-title">
-            <?php the_title(); ?>
+        <h1 class="playfair-petch-font standard-title-3 fw-bold text-center text-white header-def-title ls-2">
+            <?php echo esc_html(get_the_title()); ?>
         </h1>
         <?php
         if (function_exists('yoast_breadcrumb')) {
@@ -50,7 +50,7 @@ $bg_header_image = get_field('background_product');
     </div>
 
     <!-- tabs profil -->
-    <ul class="nav nav-tabs mt-1 mb-2 mt-lg-4 mb-lg-4 justify-content-center playfair-petch-font" id="pills-tab" role="tablist">
+    <ul class="tabs-details-nav nav nav-tabs mt-1 mb-2 mt-lg-4 mb-lg-4 justify-content-center playfair-petch-font" id="pills-tab" role="tablist">
         <!-- Kolory profili nav-tabs -->
         <li class="nav-item p-1 p-lg-0 col">
             <a class="nav-link text-center active" id="color-profil-tab" data-bs-toggle="pill" href="#color-profil" role="tab" aria-controls="color-profil" aria-selected="true">Kolory profili</a>
@@ -78,13 +78,13 @@ $bg_header_image = get_field('background_product');
                     ?>
                         <div class="col-4 col-md-2 text-center">
                             <div class="row justify-content-center">
-                                <div class="col-lg-9 text-center mb-2">
-                                    <div class="color-profil__item text-center mb-2 p-2">
+                                <div class="col-lg-10 text-center mb-2">
+                                    <div class="color-profil__item text-center mb-2 p-2 bg-white">
                                         <?php if ($image_color) : ?>
-                                            <img src="<?php echo $image_color['url']; ?>" alt="<?php echo $image_color['alt']; ?>" class="img-fluid mx-auto">
+                                            <img src="<?php echo $image_color['url']; ?>" alt="<?php echo $image_color['alt']; ?>" class="img-fluid mx-auto mb-2">
                                         <?php endif; ?>
+                                        <p class="mb-0 lh-13"><?php echo $title_color; ?></p>
                                     </div>
-                                    <p class="mb-0 lh-13"><?php echo $title_color; ?></p>
                                 </div>
                             </div>
                         </div>
