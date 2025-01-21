@@ -4,7 +4,7 @@ $hero_background_mobile = get_field('hero_background_mobile');
 ?>
 
 <div id="hero" class="top-hero position-relative d-flex justify-content-center flex-column mx-lg-4 z-0">
-    <div class="container">
+    <!-- <div class="container">
         <div class="row align-items-center justify-content-center">
             <div class="col-lg-3">
                 <img src="http://localhost:81/wordpress/wp-content/uploads/2025/01/Port-additional-img-1.jpg" id="slide-1" class="img-fluid d-none" alt="">
@@ -22,10 +22,9 @@ $hero_background_mobile = get_field('hero_background_mobile');
                 <img src="http://localhost:81/wordpress/wp-content/uploads/2025/01/Port-additional-img-5.jpg" id="slide-9" class="img-fluid" alt="">
             </div>
         </div>
-    </div>
+    </div> -->
 
     <!-- Hero Cnt -->
-     <?php /*
     <div class="container top-hero__cnt position-relative">
         <!-- Hero slider -->
         <div class="top-hero__slider py-5 py-lg-0">
@@ -61,10 +60,9 @@ $hero_background_mobile = get_field('hero_background_mobile');
                 <div class="swiper-button-prev"></div>
                 <div class="swiper-button-next"></div>
             </div>
-
         </div>
     </div>
-*/ ?>
+
     <!-- Scroll Anchor-->
     <a href="#iframe-hauses" class="tst-scroll-hint-frame tst-anchor-scroll">
         <div class="tst-scroll-hint"></div>

@@ -123,14 +123,13 @@ $bg_header_image = get_field('background_product');
 
     <!-- CTA btns -->
     <div class="row justify-content-center">
-        <div class="col-lg-6 mb-3 mb-lg-0">
-            <a href="" class="" title="">Zobacz wszystkie systemy SENATOR</a>
+        <div class="col-lg-3 d-grid">
+            <a data-togle="bs-modal" href="#form-box" class="btn btn--style-3" title="Wyślij zapytanie">Zobacz wszystkie systemy SENATOR</a>
         </div>
-        <div class="col-lg-6">
-            <a data-togle="bs-modal" class="" title="">Wyślij zapytanie/złóż zamówienie</a>
+        <div class="col-lg-3 d-grid">
+            <a data-togle="bs-modal" href="#form-box" class="btn btn--style-3" title="Wyślij zapytanie">Wyślij zapytanie</a>
         </div>
     </div>
-
 </div>
 
 <?php get_footer(); ?>

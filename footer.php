@@ -18,7 +18,7 @@
         <div class="modal-content">
             <div class="modal-body p-0" id="modal-form">
                 <div class="d-flex">
-                    <div class="col-lg-6 offerformModal__left-bg">
+                    <div class="col-lg-6 offerformModal__left-bg bg-white">
                         <div class="p-4">
                             <?php echo apply_shortcodes('[contact-form-7 id="7c3e932" title="Formularz oferty"]'); ?>
                         </div>
