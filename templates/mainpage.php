@@ -13,8 +13,14 @@ get_header();
 <!-- Main products slider -->
 <?php get_template_part('template-parts/main-products-slider'); ?>
 
+<!-- Main form banner & counters -->
+<?php get_template_part('template-parts/main-counters'); ?>
+
 <!-- Main about senator -->
 <?php get_template_part('template-parts/main-about'); ?>
+
+<!-- Main news/blog -->
+<?php get_template_part('template-parts/main-news'); ?>
 
 <?php
 while (have_posts()) : the_post();

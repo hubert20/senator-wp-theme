@@ -25,7 +25,7 @@ $hero_background_mobile = get_field('hero_background_mobile');
     </div> -->
 
     <!-- Hero Cnt -->
-    <div class="container top-hero__cnt position-relative">
+    <div class="top-hero__cnt position-relative">
         <!-- Hero slider -->
         <div class="top-hero__slider py-5 py-lg-0">
             <!-- Slider main container -->
@@ -33,22 +33,15 @@ $hero_background_mobile = get_field('hero_background_mobile');
                 <!-- Additional required wrapper -->
                 <div class="swiper-wrapper">
                     <!-- Slides -->
-                    <?php if (have_rows('hero_cnt_slider')) : ?>
+                    <?php if (have_rows('hero_slider')) : ?>
                         <?php
-                        while (have_rows('hero_cnt_slider')) : the_row();
-                            $hero_img = get_sub_field('hero_cnt_image');
-                            $hero_cnt = get_sub_field('hero_cnt_slider');
+                        while (have_rows('hero_slider')) : the_row();
+                            $hero_bg = get_sub_field('hero_slider_bg');
+                            $hero_cnt = get_sub_field('hero_slider_cnt');
                         ?>
                             <div class="swiper-slide">
-                                <div class="row justify-content-center align-items-center">
-                                    <div class="col-lg-6 mb-3 mb-lg-0">
-                                        <?php echo $hero_cnt; ?>
-                                    </div>
-                                    <div class="col-6 col-lg-4 text-center">
-                                        <?php if ($hero_img) : ?>
-                                            <img src="<?php echo $hero_img['url']; ?>" alt="<?php echo $hero_img['alt']; ?>" class="img-fluid mx-auto">
-                                        <?php endif; ?>
-                                    </div>
+                                <div class="slide-inner" style="background-image:url('<?php echo $hero_bg; ?>')">
+                                    <?php echo $hero_cnt; ?>
                                 </div>
                             </div>
                         <?php endwhile; ?>
@@ -81,3 +74,69 @@ $hero_background_mobile = get_field('hero_background_mobile');
         background-image: url('<?php echo $hero_background_mobile; ?>');
     }
 </style>
+
+<style>
+    .swiper-container {
+        height: calc(100vh - 120px);
+        margin: 60px;
+    }
+
+    .swiper-slide {
+        overflow: hidden;
+    }
+
+    .slide-inner {
+        position: absolute;
+        width: 100%;
+        height: 100%;
+        left: 0;
+        top: 0;
+        background-size: cover;
+        background-position: center;
+    }
+</style>
+
+<script>
+var interleaveOffset = 0.5;
+
+var swiperOptions = {
+  loop: true,
+  speed: 1000,
+  grabCursor: true,
+  watchSlidesProgress: true,
+  mousewheelControl: true,
+  keyboardControl: true,
+  navigation: {
+    nextEl: ".swiper-button-next",
+    prevEl: ".swiper-button-prev"
+  },
+  on: {
+    progress: function() {
+      var swiper = this;
+      for (var i = 0; i < swiper.slides.length; i++) {
+        var slideProgress = swiper.slides[i].progress;
+        var innerOffset = swiper.width * interleaveOffset;
+        var innerTranslate = slideProgress * innerOffset;
+        swiper.slides[i].querySelector(".slide-inner").style.transform =
+          "translate3d(" + innerTranslate + "px, 0, 0)";
+      }      
+    },
+    touchStart: function() {
+      var swiper = this;
+      for (var i = 0; i < swiper.slides.length; i++) {
+        swiper.slides[i].style.transition = "";
+      }
+    },
+    setTransition: function(speed) {
+      var swiper = this;
+      for (var i = 0; i < swiper.slides.length; i++) {
+        swiper.slides[i].style.transition = speed + "ms";
+        swiper.slides[i].querySelector(".slide-inner").style.transition =
+          speed + "ms";
+      }
+    }
+  }
+};
+
+var swiper = new Swiper(".swiper-container", swiperOptions);
+</script>
