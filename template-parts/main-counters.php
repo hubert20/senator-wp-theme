@@ -11,13 +11,6 @@ $count_cnt = get_field('licznik_cnt');
     </div>
     <!-- Counters -->
     <div class="counter-main-box py-4 py-lg-5 bg-white" id="counter">
-        <h2 class="subtitle chakra-petch-font text-center standard-title-4 fw-bolder mb-3 mb-lg-5 position-relative text-yellow" style="z-index: 0;">
-            Skorzystaj z naszego formularza kontaktowego!
-        </h2>
-        <p class="subtitle chakra-petch-font text-center standard-title-4 fw-bolder mb-3 mb-lg-5 position-relative" style="z-index: 0;">
-            Jeśli masz pytania dotyczące naszej oferty lub chcesz złożyć zamówienie online, wypełnij formularz zapytania ofertowego. 
-            Skontaktujemy się z Tobą w celu realizacji zamówienia.
-        </p>
         <div class="row justify-content-center">
             <div class="col-lg-3">
                 <div class="position-relative counter-number--box">
