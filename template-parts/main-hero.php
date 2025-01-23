@@ -29,7 +29,7 @@ $hero_background_mobile = get_field('hero_background_mobile');
         <!-- Hero slider -->
         <div class="top-hero__slider py-5 py-lg-0">
             <!-- Slider main container -->
-            <div class="swiper swiper-container main-swiper">
+            <div class="swiper swiper-container swiper-hero main-swiper">
                 <!-- Additional required wrapper -->
                 <div class="swiper-wrapper">
                     <!-- Slides -->
@@ -96,7 +96,7 @@ $hero_background_mobile = get_field('hero_background_mobile');
     }
 </style>
 
-<script>
+<!-- <script>
 var interleaveOffset = 0.5;
 
 var swiperOptions = {
@@ -138,5 +138,5 @@ var swiperOptions = {
   }
 };
 
-var swiper = new Swiper(".swiper-container", swiperOptions);
-</script>
+var swiper = new Swiper(".swiper-hero", swiperOptions);
+</script> -->
