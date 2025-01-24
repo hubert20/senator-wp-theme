@@ -3,14 +3,14 @@ $form_bg = get_field('form_bg');
 $form_cnt = get_field('form_cnt');
 $count_cnt = get_field('licznik_cnt');
 ?>
-
 <!-- Contact Form -->
 <section class="form-banner py-4 py-lg-5" id="form-banner" style="background-image: url('<?php echo $form_bg; ?>');">
     <div class="container mb-4 mb-lg-5">
         <?php echo $form_cnt; ?>
     </div>
     <!-- Counters -->
-    <div class="counter-main-box py-4 py-lg-5 bg-white" id="counter">
+    <?php echo $count_cnt; ?>
+    <!-- <div class="counter-main-box py-4 py-lg-5 bg-white" id="counter">
         <div class="row justify-content-center">
             <div class="col-lg-3">
                 <div class="position-relative counter-number--box">
@@ -41,5 +41,5 @@ $count_cnt = get_field('licznik_cnt');
                 <p class="text-uppercase fw-bold counter-main-box--titles lh-13">Zadowolonych klientów</p>
             </div>
         </div>
-    </div>
+    </div> -->
 </section>
