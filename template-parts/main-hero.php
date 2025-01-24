@@ -1,8 +1,3 @@
-<?php
-$hero_background_desktop = get_field('hero_background_desktop');
-$hero_background_mobile = get_field('hero_background_mobile');
-?>
-
 <div id="hero" class="top-hero position-relative d-flex justify-content-center flex-column mx-lg-4 z-0">
     <!-- <div class="container">
         <div class="row align-items-center justify-content-center">
