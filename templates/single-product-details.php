@@ -29,15 +29,119 @@ $bg_header_image = get_field('background_product');
         <div class="col-lg-6 mb-3 mb-lg-0">
             <!-- Gallery slider -->
             <?php if (have_rows('slider')) : ?>
-                <div class="row">
-                    <?php
-                    while (have_rows('slider')) : the_row();
-                        $image_slider = get_sub_field('image');
-                    ?>
-                        <img src="<?php echo $image_slider['url']; ?>" alt="<?php echo $image_slider['alt']; ?>" class="img-fluid mx-auto">
-                    <?php endwhile; ?>
+                <div class="gallery">
+                    <!-- Główna galeria -->
+                    <div class="swiper-container gallery-slider">
+                        <div class="swiper-wrapper">
+                            <?php
+                            while (have_rows('slider')) : the_row();
+                                $image_slider = get_sub_field('image');
+                            ?>
+                                <div class="swiper-slide">
+                                    <img src="<?php echo esc_url($image_slider['sizes']['medium']); ?>" alt="<?php echo esc_attr($image_slider['alt']); ?>" class="img-fluid mx-auto">
+                                </div>
+                            <?php endwhile; ?>
+                        </div>
+                        <div class="swiper-button-prev"></div>
+                        <div class="swiper-button-next"></div>
+                    </div>
+                    <!-- Miniatury -->
+                    <div class="swiper-container gallery-thumbs">
+                        <div class="swiper-wrapper">
+                            <?php
+                            while (have_rows('slider')) : the_row();
+                                $image_slider = get_sub_field('image');
+                            ?>
+                                <div class="swiper-slide">
+                                    <img src="<?php echo esc_url($image_slider['sizes']['thumbnail']); ?>" alt="<?php echo esc_attr($image_slider['alt']); ?>" class="img-fluid mx-auto">
+                                </div>
+                            <?php endwhile; ?>
+                        </div>
+                    </div>
                 </div>
             <?php endif; ?>
+            <style>
+                .gallery {
+                    width: 100%;
+                    max-width: 620px;
+                    margin: 40px auto;
+
+                    //メインスライド
+                    &-slider {
+                        width: 100%;
+                        height: auto;
+                        margin: 0 0 10px 0;
+
+                        .swiper-slide {
+                            width: auto;
+                            height: 400px;
+
+                            img {
+                                display: block;
+                                width: auto;
+                                height: 100%;
+                                margin: 0 auto;
+                            }
+                        }
+                    }
+
+                    //サムネイルスライド
+                    &-thumbs {
+                        width: 100%;
+                        padding: 0;
+                        overflow: hidden;
+
+                        .swiper-slide {
+                            ;
+                            width: 100px;
+                            height: 100px;
+                            text-align: center;
+                            overflow: hidden;
+                            opacity: .1;
+
+                            &-active {
+                                opacity: 1;
+                            }
+
+                            img {
+                                width: auto;
+                                height: 100%;
+                            }
+                        }
+                    }
+                }
+            </style>
+
+            <script>
+                //メインスライド
+                var slider = new Swiper('.gallery-slider', {
+                    slidesPerView: 1,
+                    centeredSlides: true,
+                    loop: true,
+                    loopedSlides: 6, //スライドの枚数と同じ値を指定
+                    navigation: {
+                        nextEl: '.swiper-button-next',
+                        prevEl: '.swiper-button-prev',
+                    },
+                });
+
+                //サムネイルスライド
+                var thumbs = new Swiper('.gallery-thumbs', {
+                    slidesPerView: 'auto',
+                    spaceBetween: 10,
+                    centeredSlides: true,
+                    loop: true,
+                    slideToClickedSlide: true,
+                });
+
+                //3系
+                //slider.params.control = thumbs;
+                //thumbs.params.control = slider;
+
+                //4系～
+                slider.controller.control = thumbs;
+                thumbs.controller.control = slider;
+            </script>
         </div>
         <div class="col-lg-6">
             <!-- Descriptions product-->
