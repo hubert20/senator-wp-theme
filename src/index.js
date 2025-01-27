@@ -1,8 +1,10 @@
 require("bootstrap");
 import Swiper from "swiper"
-import { Navigation } from 'swiper/modules'
+import { Navigation, Mousewheel, Keyboard } from 'swiper/modules'
 
-Swiper.use([Navigation]);
+
+// Zarejestrowanie modułów
+Swiper.use([Navigation, Mousewheel, Keyboard]);
 
 (function () {
 const swiper = new Swiper('.swiper-main-products', {
@@ -35,44 +37,91 @@ const swiper = new Swiper('.swiper-main-products', {
 })
 
   // Scroll Counter number
-  var counted = 0;
-  window.addEventListener('scroll', function () {
+  // var counted = 0;
+  // window.addEventListener('scroll', function () {
 
-    var counterElement = document.getElementById('counter');
-    var oTop = counterElement.offsetTop - window.innerHeight;
+  //   var counterElement = document.getElementById('counter');
+  //   var oTop = counterElement.offsetTop - window.innerHeight;
 
-    if (counted === 0 && window.scrollY > oTop) {
-      var countElements = document.querySelectorAll('.count');
-      countElements.forEach(function (countElement) {
-        var countTo = parseInt(countElement.getAttribute('data-count'));
-        var currentCount = parseInt(countElement.textContent);
+  //   if (counted === 0 && window.scrollY > oTop) {
+  //     var countElements = document.querySelectorAll('.count');
+  //     countElements.forEach(function (countElement) {
+  //       var countTo = parseInt(countElement.getAttribute('data-count'));
+  //       var currentCount = parseInt(countElement.textContent);
 
-        var startCount = { countNum: currentCount };
+  //       var startCount = { countNum: currentCount };
 
-        var duration = 2000;
-        var startTime = null;
+  //       var duration = 2000;
+  //       var startTime = null;
 
-        function animateCount(timestamp) {
-          if (!startTime) startTime = timestamp;
-          var progress = timestamp - startTime;
-          var stepCount = Math.min(progress / duration, 1) * (countTo - currentCount) + currentCount;
+  //       function animateCount(timestamp) {
+  //         if (!startTime) startTime = timestamp;
+  //         var progress = timestamp - startTime;
+  //         var stepCount = Math.min(progress / duration, 1) * (countTo - currentCount) + currentCount;
 
-          countElement.textContent = Math.floor(stepCount);
+  //         countElement.textContent = Math.floor(stepCount);
 
-          if (progress < duration) {
-            requestAnimationFrame(animateCount);
-          } else {
-            countElement.textContent = countTo; // Ustaw ostateczną wartość
-          }
+  //         if (progress < duration) {
+  //           requestAnimationFrame(animateCount);
+  //         } else {
+  //           countElement.textContent = countTo; // Ustaw ostateczną wartość
+  //         }
+  //       }
+
+  //       requestAnimationFrame(animateCount);
+  //     });
+
+  //     counted = 1;
+  //   }
+  // });
+
+//Swiper hero
+const interleaveOffset = 0.5;
+
+const swiperOptions = {
+  loop: true,
+  speed: 1000,
+  grabCursor: true,
+  watchSlidesProgress: true,
+  mousewheel: true, // Aktywacja obsługi kółka myszy
+  keyboard: {
+    enabled: true, // Aktywacja obsługi klawiatury
+  },
+  navigation: {
+    nextEl: ".swiper-button-next",
+    prevEl: ".swiper-button-prev",
+  },
+  on: {
+    progress(swiper) {
+      swiper.slides.forEach((slide) => {
+        const slideProgress = slide.progress;
+        const innerOffset = swiper.width * interleaveOffset;
+        const innerTranslate = slideProgress * innerOffset;
+        const inner = slide.querySelector(".slide-inner");
+        if (inner) {
+          inner.style.transform = `translate3d(${innerTranslate}px, 0, 0)`;
         }
-
-        requestAnimationFrame(animateCount);
       });
+    },
+    touchStart(swiper) {
+      swiper.slides.forEach((slide) => {
+        slide.style.transition = "";
+      });
+    },
+    setTransition(swiper, speed) {
+      swiper.slides.forEach((slide) => {
+        slide.style.transition = `${speed}ms`;
+        const inner = slide.querySelector(".slide-inner");
+        if (inner) {
+          inner.style.transition = `${speed}ms`;
+        }
+      });
+    },
+  },
+};
 
-      counted = 1;
-    }
-  });
-
+// Inicjalizacja Swipera
+const heroSwiper = new Swiper(".swiper-hero", swiperOptions);
 
       // Add data-toggle to link menu
       var menuItem = document.querySelector('#menu-item-126 a');
