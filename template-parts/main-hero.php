@@ -1,28 +1,8 @@
-<div id="hero" class="top-hero position-relative d-flex justify-content-center flex-column mx-lg-4 z-0">
-    <!-- <div class="container">
-        <div class="row align-items-center justify-content-center">
-            <div class="col-lg-3">
-                <img src="http://localhost:81/wordpress/wp-content/uploads/2025/01/Port-additional-img-1.jpg" id="slide-1" class="img-fluid d-none" alt="">
-                <img src="http://localhost:81/wordpress/wp-content/uploads/2025/01/Port-additional-img-4.jpg" id="slide-2" class="img-fluid d-none" alt="">
-                <img src="http://localhost:81/wordpress/wp-content/uploads/2025/01/Port-additional-img-6.jpg" id="slide-3" class="img-fluid" alt="">
-            </div>
-            <div class="col-lg-5">
-                <img src="http://localhost:81/wordpress/wp-content/uploads/2025/01/home-6-port-2.jpg" id="slide-4" class="img-fluid d-none" alt="">
-                <img src="http://localhost:81/wordpress/wp-content/uploads/2025/01/home-6-port-5.jpg" id="slide-5" class="img-fluid d-none" alt="">
-                <img src="http://localhost:81/wordpress/wp-content/uploads/2025/01/home-6-port-8.jpg" id="slide-6" class="img-fluid" alt="">
-            </div>
-            <div class="col-lg-3">
-                <img src="http://localhost:81/wordpress/wp-content/uploads/2025/01/Port-additional-img-2.jpg" id="slide-7" class="img-fluid d-none" alt="">
-                <img src="http://localhost:81/wordpress/wp-content/uploads/2025/01/Port-additional-img-3.jpg" id="slide-8" class="img-fluid d-none" alt="">
-                <img src="http://localhost:81/wordpress/wp-content/uploads/2025/01/Port-additional-img-5.jpg" id="slide-9" class="img-fluid" alt="">
-            </div>
-        </div>
-    </div> -->
-
+<div id="hero" class="top-hero position-relative d-flex justify-content-center flex-column z-0">
     <!-- Hero Cnt -->
     <div class="top-hero__cnt position-relative">
         <!-- Hero slider -->
-        <div class="top-hero__slider py-5 py-lg-0">
+        <div class="top-hero__slider">
             <!-- Slider main container -->
             <div class="swiper swiper-container swiper-hero main-swiper">
                 <!-- Additional required wrapper -->
@@ -56,37 +36,3 @@
         <div class="tst-scroll-hint"></div>
     </a>
 </div>
-
-<!-- BG Hero -->
-<style>
-    @media (min-width: 992px) {
-        .top-hero {
-            background-image: url('<?php echo $hero_background_desktop; ?>') !important;
-        }
-    }
-
-    .top-hero {
-        background-image: url('<?php echo $hero_background_mobile; ?>');
-    }
-</style>
-
-<style>
-    .swiper-container {
-        height: calc(100vh - 120px);
-        margin: 60px;
-    }
-
-    .swiper-slide {
-        overflow: hidden;
-    }
-
-    .slide-inner {
-        position: absolute;
-        width: 100%;
-        height: 100%;
-        left: 0;
-        top: 0;
-        background-size: cover;
-        background-position: center;
-    }
-</style>

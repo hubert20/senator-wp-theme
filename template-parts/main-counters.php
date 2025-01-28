@@ -7,9 +7,10 @@ $count_cnt = get_field('licznik_cnt');
 <section class="form-banner py-4 py-lg-5" id="form-banner" style="background-image: url('<?php echo $form_bg; ?>');">
     <div class="container mb-4 mb-lg-5">
         <?php echo $form_cnt; ?>
+        <?php echo $count_cnt; ?>
     </div>
     <!-- Counters -->
-    <?php echo $count_cnt; ?>
+   
     <!-- <div class="counter-main-box py-4 py-lg-5 bg-white" id="counter">
         <div class="row justify-content-center">
             <div class="col-lg-3">
