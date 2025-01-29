@@ -13,8 +13,8 @@ const swiper = new Swiper('.swiper-main-products', {
   spaceBetween: 10,
   loop: true,
   navigation: {
-    nextEl: ".swiper-button-next",
-    prevEl: ".swiper-button-prev",
+    nextEl: ".swiper-main-products__next",
+    prevEl: ".swiper-main-products__prev",
   },
   // Responsive breakpoints
   breakpoints: {
@@ -88,8 +88,8 @@ const swiperOptions = {
     enabled: true, // Aktywacja obsługi klawiatury
   },
   navigation: {
-    nextEl: ".swiper-button-next",
-    prevEl: ".swiper-button-prev",
+    nextEl: ".swiper-hero-button-next",
+    prevEl: ".swiper-hero-button-prev",
   },
   on: {
     progress(swiper) {
