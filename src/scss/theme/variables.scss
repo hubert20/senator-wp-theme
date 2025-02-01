@@ -39,7 +39,7 @@ $colors: (
 //Custom Btn
 .btn {
     font-size: 18px;
-    font-weight: 700;
+    font-weight: 400;
     color: #fff;
     -webkit-transition: .2s cubic-bezier(.24, .74, .58, 1);
     -khtml-transition: .2s cubic-bezier(.24, .74, .58, 1);
@@ -59,6 +59,7 @@ $colors: (
 
 .btn.btn--style-2 {
     font-size: 18px;
+    color: #000;
     line-height: 1.3em;
     background-color: $yellow;
     padding: 18px 39px 15px;

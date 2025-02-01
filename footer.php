@@ -24,7 +24,7 @@
                         </div>
                     </div>
                     <div class="col-lg-6 d-none d-lg-flex offerformModal__right-bg">
-                        <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal" aria-label="Close">
+                        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close">
                             <span aria-hidden="true"></span>
                         </button>
                         <span class="round-close"></span>

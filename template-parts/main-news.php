@@ -1,6 +1,8 @@
 <!-- News -->
 <section class="main-news p-relative p-4">
-    <h2 class="text-center mb-4 mb-lg-5 playfair-petch-font standard-title-4">Aktualności SENATOR</h2>
+    <h2 class="text-center mb-4 mb-lg-5 playfair-petch-font standard-title-4 text-white">
+        <span class="d-inline-block icon-text icon-text--white px-4">Aktualności SENATOR</span>
+    </h2>
     <div class="swiper swiper-news">
         <div class="swiper-wrapper">
             <?php

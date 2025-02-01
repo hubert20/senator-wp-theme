@@ -13,7 +13,7 @@
             top: 53px;
             width: 100%;
             z-index: 9;
-            background: rgba(0, 0, 0, .2);
+            background: rgba(0, 0, 0, .3);
         }
     }
 }
@@ -857,5 +857,49 @@
     100% {
         -webkit-transform: translateY(0) translateX(-50%);
         transform: translateY(0) translateX(-50%)
+    }
+}
+
+//Title with icons
+@include media-breakpoint-up(xxl) {
+    .icon-text {
+        position: relative;
+
+        &:before,
+        &:after {
+            position: absolute;
+            display: inline-block;
+            content: '';
+            width: 10px;
+            height: 10px;
+            background: #000;
+            top: 0;
+            bottom: 0;
+            margin: auto;
+            transform: rotate(45deg);
+        }
+
+        &--yellow {
+
+            &:before,
+            &:after {
+                background: $yellow;
+            }
+        }
+        &--white {
+
+            &:before,
+            &:after {
+                background: white;
+            }
+        }
+
+        &:before {
+            left: 0;
+        }
+
+        &:after {
+            right: 0;
+        }
     }
 }

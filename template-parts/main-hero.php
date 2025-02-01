@@ -15,7 +15,7 @@
                             $hero_cnt = get_sub_field('hero_slider_cnt');
                         ?>
                             <div class="swiper-slide">
-                                <div class="slide-inner" style="background-image:url('<?php echo $hero_bg; ?>')">
+                                <div class="slide-inner d-flex justify-content-center align-items-center flex-column" style="background-image:url('<?php echo $hero_bg; ?>')">
                                     <?php echo $hero_cnt; ?>
                                 </div>
                             </div>
@@ -30,7 +30,7 @@
     </div>
 
     <!-- Scroll Anchor-->
-    <a href="#iframe-hauses" class="tst-scroll-hint-frame tst-anchor-scroll">
+    <a href="#main-products-offer-slider" class="tst-scroll-hint-frame tst-anchor-scroll">
         <div class="tst-scroll-hint"></div>
     </a>
 </div>
