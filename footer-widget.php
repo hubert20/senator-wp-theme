@@ -25,24 +25,24 @@
                 <h5 class="text-yellow standard-title-7 playfair-petch-font mb-2 mb-lg-4 fw-bold">Kontakt</h5>
                 <ul class="list-unstyled p-0 bottom-contact">
                     <li class="mb-3 mb-lg-4 d-flex align-items-center">
-                        <i class="fa fa-map-marker me-4 text-green"></i>
+                        <i class="fa fa-map-marker me-4 text-yellow"></i>
                         <span>
-                            HATEK Sp. z o.o. <br>
-                            06-100 Pułtusk<br>
-                            ul. Tartaczna 71<br>
+                            Senator sp. z o. o. <br>
+                            09-500 Gostynin<br>
+                            ul. Płocka 37,<br>
                             woj. mazowieckie
                         </span>
                     </li>
                     <li class="mb-3 mb-lg-4 d-flex align-items-center">
                         <i class="fa fa-phone me-4 text-yellow"></i>
-                        <a href="tel:+48607140231" class="">
-                            +48 607 140 231
+                        <a href="tel:+48242353645" class="">
+                            + 48 24 235 36 45
                         </a>
                     </li>
                     <li class="d-flex align-items-center">
                         <i class="fa fa-envelope me-4 text-yellow"></i>
-                        <a href="mailto: hatek@hatek.com.pl" class="">
-                            hatek@hatek.com.pl
+                        <a href="mailto: biuro@senator.com.pl" class="">
+                            biuro@senator.com.pl
                         </a>
                     </li>
                 </ul>
