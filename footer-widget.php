@@ -8,15 +8,14 @@
         </div>
         <div class="footer-widgets__logo mb-4 mb-lg-5"></div>
         <div class="row justify-content-center">
-
-
             <div class="col-lg-4 footer-widgets__bottom-desc pe-lg-5 mb-4 mb-lg-0">
                 <h5 class="text-yellow standard-title-7 playfair-petch-font mb-2 mb-lg-4 fw-bold">O nas</h5>
                 <p class="bottom fw-lighter">
-                    Od 1997 dostarczamy szafy na wymiar wraz z systemem drzwi przesuwnych. W naszej ofercie znajdują się również pozostałe elementy akcesoriów potrzebnych do zaprojektowania każdego pomieszczenia. 
+                    Od 1997 dostarczamy szafy na wymiar wraz z systemem drzwi przesuwnych. 
+                    W naszej ofercie znajdują się również pozostałe elementy akcesoriów potrzebnych do zaprojektowania każdego pomieszczenia.
                     Działając od wielu lat śmiało możemy stwierdzić, że jesteśmy jednym z liderów na polskim rynku.
-                    Senator sp. z o. o. specjalizuje się w sprzedaży hurtowej i detalicznej systemów drzwi przesuwnych i szaf garderobianych. 
-                    Ponadto sprzedajemy akcesoria meblowe od drewnianych kołków dla stolarzy po rączki, uchwyty i prowadnice dla klienta indywidualnego. 
+                    Senator sp. z o. o. specjalizuje się w sprzedaży hurtowej i detalicznej systemów drzwi przesuwnych i szaf garderobianych.
+                    Ponadto sprzedajemy akcesoria meblowe od drewnianych kołków dla stolarzy po rączki, uchwyty i prowadnice dla klienta indywidualnego.
                     Nasz asortyment zawiera produkty niezbędne do montażu mebli oraz wyposażenia wnętrz w takich miejscach jak: kuchnia, salon, łazienka, garderoba oraz w wielu innych pomieszczeniach.
                 </p>
                 <p class="bottom fw-lighter">
@@ -38,11 +37,16 @@
                             woj. mazowieckie
                         </span>
                     </li>
-                    <li class="mb-3 mb-lg-4 d-flex align-items-center">
+                    <li class="mb-2 d-flex align-items-center">
                         <i class="fa fa-phone me-4 text-yellow"></i>
                         <a href="tel:+48242353645" class="">
-                            + 48 24 235 36 45
-                            fax: + 48 24 235 33 81
+                            +48 24 235 36 45
+                        </a>
+                    </li>
+                    <li class="mb-3 mb-lg-4 d-flex align-items-center">
+                        <i class="fa fa-fax me-4 text-yellow"></i>
+                        <a href="tel:+48242353645" class="">
+                            +48 24 235 33 81
                         </a>
                     </li>
                     <li class="d-flex align-items-center">
@@ -53,22 +57,10 @@
                     </li>
                 </ul>
             </div>
-
-
-
-
-
-
-
-
-
             <div class="col-lg-4 footer-widgets__bottom-desc mb-4 mb-lg-0">
                 <?php if (is_active_sidebar('menu-about')) : ?>
                     <?php dynamic_sidebar('menu-about'); ?>
                 <?php endif; ?>
-                <a href="https://www.facebook.com/senator.piotrlewandowski" target="_blank" rel="nofollow noopener noreferrer" class="text-center d-inline-block text-yellow bottom-fb-link">
-                    <i class="fa fa-facebook text-orange"></i>
-                </a>
             </div>
             <div class="col-lg-4 footer-widgets__bottom-desc mb-4 mb-lg-0">
                 <?php if (is_active_sidebar('footer-start')) : ?>
