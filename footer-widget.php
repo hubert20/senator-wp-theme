@@ -11,11 +11,16 @@
 
 
             <div class="col-lg-4 footer-widgets__bottom-desc pe-lg-5 mb-4 mb-lg-0">
-                <p class="bottom fw-lighter">
                 <h5 class="text-yellow standard-title-7 playfair-petch-font mb-2 mb-lg-4 fw-bold">O nas</h5>
-                Jesteśmy firmą zajmującą się projektowaniem, produkcją i montażem konstrukcji drewnianych.
-                Na&nbsp;rynku istniejemy od 2003 roku, w związku z tym oferujemy Państwu bogate doświadczenie,
-                fachowość i przede wszystkim pokaźną, wciąż rozwijaną wiedzę z zakresu budownictwa w technologii drewnianej.
+                <p class="bottom fw-lighter">
+                    Od 1997 dostarczamy szafy na wymiar wraz z systemem drzwi przesuwnych. W naszej ofercie znajdują się również pozostałe elementy akcesoriów potrzebnych do zaprojektowania każdego pomieszczenia. 
+                    Działając od wielu lat śmiało możemy stwierdzić, że jesteśmy jednym z liderów na polskim rynku.
+                    Senator sp. z o. o. specjalizuje się w sprzedaży hurtowej i detalicznej systemów drzwi przesuwnych i szaf garderobianych. 
+                    Ponadto sprzedajemy akcesoria meblowe od drewnianych kołków dla stolarzy po rączki, uchwyty i prowadnice dla klienta indywidualnego. 
+                    Nasz asortyment zawiera produkty niezbędne do montażu mebli oraz wyposażenia wnętrz w takich miejscach jak: kuchnia, salon, łazienka, garderoba oraz w wielu innych pomieszczeniach.
+                </p>
+                <p class="bottom fw-lighter">
+                    Współpraca z nami to gwarancja jakości połączonej z pasją do wygody i luksusu.
                 </p>
                 <a href="https://www.facebook.com/hatek.hatek.902" target="_blank" rel="nofollow noopener noreferrer" class="text-center d-inline-block text-yellow bottom-fb-link">
                     <i class="fa fa-facebook text-green"></i>
@@ -37,6 +42,7 @@
                         <i class="fa fa-phone me-4 text-yellow"></i>
                         <a href="tel:+48242353645" class="">
                             + 48 24 235 36 45
+                            fax: + 48 24 235 33 81
                         </a>
                     </li>
                     <li class="d-flex align-items-center">
@@ -47,16 +53,6 @@
                     </li>
                 </ul>
             </div>
-
-
-
-
-
-
-
-
-
-
 
 
 
