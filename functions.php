@@ -141,6 +141,19 @@ add_theme_support('title-tag');
 */
 add_theme_support('post-thumbnails');
 
+// Then we'll add our 2 custom images
+add_image_size('news-width', 890, 664, true);
+
+// And then we'll add the custom size that spans the width of the blog to the Gutenberg image dropdown
+add_filter('image_size_names_choose', 'wpmudev_custom_image_sizes');
+
+function wpmudev_custom_image_sizes($sizes)
+{
+    return array_merge($sizes, array(
+        'news-width' => __('News Width')
+    ));
+}
+
 add_filter('body_class', 'add_category_to_single');
 function add_category_to_single($classes)
 {
