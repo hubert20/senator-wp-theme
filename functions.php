@@ -139,7 +139,21 @@ add_theme_support('title-tag');
 *
 * @link https://developer.wordpress.org/themes/functionality/featured-images-post-thumbnails/
 */
+
 add_theme_support('post-thumbnails');
+
+// Then we'll add our custom images - 890px na 664px size
+add_image_size('news-width', 890, 664, true);
+
+// And then we'll add the custom size that spans the width of the blog to the Gutenberg image dropdown
+add_filter('image_size_names_choose', 'wpmudev_custom_image_sizes');
+
+function wpmudev_custom_image_sizes($sizes)
+{
+    return array_merge($sizes, array(
+        'news-width' => __('News Width')
+    ));
+}
 
 add_filter('body_class', 'add_category_to_single');
 function add_category_to_single($classes)
@@ -172,27 +186,7 @@ function add_font_awesome_4_cdn_attributes($html, $handle)
 }
 add_filter('style_loader_tag', 'add_font_awesome_4_cdn_attributes', 10, 2);
 
-
-// First we'll add support for featured images
-add_theme_support('post-thumbnails');
-
-// Then we'll add our 2 custom images
-add_image_size('blog-width', 530, 350, true);
-add_image_size('news-width', 450, 450, true);
-
-// And then we'll add the custom size that spans the width of the blog to the Gutenberg image dropdown
-add_filter('image_size_names_choose', 'wpmudev_custom_image_sizes');
-
-function wpmudev_custom_image_sizes($sizes)
-{
-  return array_merge($sizes, array(
-    'blog-width' => __('Blog Width'),
-    'news-width' => __('News Width'),
-  ));
-}
-
 add_filter('show_admin_bar', '__return_false');
-
 
 /**
  * Register widget area.

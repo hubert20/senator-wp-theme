@@ -15,7 +15,7 @@
                             <?php if (has_post_thumbnail($post->ID)) : ?>
                                 <?php
                                 $imgID  = get_post_thumbnail_id($post->ID);
-                                $image  = wp_get_attachment_image_src($imgID, 'sg-width', false, '');
+                                $image  = wp_get_attachment_image_src($imgID, 'news-width', false, '');
                                 $imgAlt = get_post_meta($imgID, '_wp_attachment_image_alt', true);
                                 ?>
                                 <a href="<?php echo esc_url(get_permalink()); ?>" title="<?php echo esc_attr(get_the_title()); ?>" class="d-block">
