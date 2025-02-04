@@ -124,7 +124,7 @@ const swiperOptions = {
 const heroSwiper = new Swiper(".swiper-hero", swiperOptions);
 
       // Add data-toggle to link menu
-      var menuItem = document.querySelector('#menu-item-126 a');
+      var menuItem = document.querySelector('#menu-item-194 a');
       if (menuItem) {
           menuItem.setAttribute('data-bs-toggle', 'modal');
           menuItem.setAttribute('data-bs-target', '#offerformModal');

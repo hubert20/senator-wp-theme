@@ -3,7 +3,7 @@
     <div class="container py-4 py-lg-5">
         <div class="row justify-content-center">
             <div class="col-8 col-lg-3 text-center">
-                <img src="http://localhost:81/wordpress/wp-content/uploads/2025/01/logo-white-yellow-1.png" class="img-fluid mb-4 mb-lg-5 mx-auto">
+                <img src="/wp-content/uploads/2025/02/logo-white-yellow-1.png" class="img-fluid mb-4 mb-lg-5 mx-auto">
             </div>
         </div>
         <div class="footer-widgets__logo mb-4 mb-lg-5"></div>

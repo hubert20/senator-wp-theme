@@ -2,7 +2,7 @@
 .home,
 .post-template {
     background-color: rgb(16, 16, 16);
-    background-image: url('http://localhost:81/wordpress/wp-content/uploads/2025/01/body-bg.png');
+    background-image: url('/wp-content/uploads/2025/02/body-bg.png');
 }
 
 //Top Menu
@@ -108,7 +108,7 @@
                 }
 
                 &.active {
-                    color: #fff;
+                    color: #000;
 
                     &:before {
                         width: 100%;
@@ -745,7 +745,7 @@
     }
 
     &__right-bg {
-        background-image: url('http://localhost:81/wordpress/wp-content/uploads/2025/01/senator-system-otwarty-main-min.jpg');
+        background-image: url('/wp-content/uploads/2025/02/senator-system-otwarty-main-min.jpg');
         background-size: cover;
     }
 
