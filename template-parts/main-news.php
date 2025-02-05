@@ -43,7 +43,7 @@
         </div>
     </div>
     <div class="position-relative d-flex align-items-center justify-content-center">
-        <div class="swiper-main-products__prev swiper-button-prev"></div>
-        <div class="swiper-main-products__next swiper-button-next"></div>
+        <div class="swiper-main-news__prev swiper-button-prev"></div>
+        <div class="swiper-main-news__next swiper-button-next"></div>
     </div>
 </section>
