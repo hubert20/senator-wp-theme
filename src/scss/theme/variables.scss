@@ -65,7 +65,7 @@ $colors: (
     padding: 18px 39px 15px;
     border: 2px solid $yellow;
     clip-path: polygon(20px 0, 100% 0, 100% calc(100% - 20px), calc(100% - 20px) 100%, 0 100%, 0 20px);
-    font-family: chakra petch, sans-serif
+    font-family: $dosis-font-family;
 }
 
 .btn.btn--style-2:after {
@@ -173,3 +173,16 @@ $colors: (
 }
 
 
+@keyframes growOut {
+    0% {
+        transform: scale(0)
+    }
+
+    80% {
+        transform: scale(1.1)
+    }
+
+    100% {
+        transform: scale(1)
+    }
+}
