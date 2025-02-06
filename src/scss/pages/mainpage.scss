@@ -338,3 +338,18 @@
 .swiper-slide-active .slide-text {
     animation: slideFadeDown 0.8s ease-out forwards;
 }
+
+//News
+
+.main-news {
+    .swiper-slide {
+        height: auto;
+    }
+    &__item-date {
+        color: #999;
+    }
+
+    &__item-title-post {
+        font-size: 24px;
+    }
+}

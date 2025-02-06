@@ -22,17 +22,21 @@
                                     <img src="<?php echo $image[0]; ?>" alt="<?php echo $imgAlt; ?>" class="img-fluid main-news__img">
                                 </a>
                             <?php endif; ?>
-                            <div class="main-news__item-cnt position-relative d-flex flex-grow-1 flex-column">
+                            <div class="p-3 p-lg-4 main-news__item-cnt position-relative d-flex flex-grow-1 flex-column bg-white">
                                 <?php if ('post' === get_post_type()) : ?>
-                                    <span class="main-news__item-date px-3 py-1 text-white bg-red-light"><?php echo get_the_date(); ?></span>
+                                    <span class="main-news__item-date py-1"><?php echo get_the_date(); ?></span>
                                 <?php endif; ?>
-                                <div class="p-3 p-lg-4 pt-5 bg-white main-news__item-box d-flex flex-column flex-grow-1">
-                                    <p class="main-news__item-title-post">
-                                        <a href="<?php echo esc_url(get_permalink()); ?>" title="<?php echo esc_attr(get_the_title()); ?>" class="text-dark lh-12">
+                                <div class="main-news__item-box d-flex flex-column flex-grow-1">
+                                    <p class="main-news__item-title-post playfair-petch-font fw-bold lh-12 flex-grow-1">
+                                        <a href="<?php echo esc_url(get_permalink()); ?>" title="<?php echo esc_attr(get_the_title()); ?>" class="text-dark">
                                             <?php echo wp_trim_words(get_the_title(), 15, ' [...]'); ?>
                                         </a>
                                     </p>
-                                    <p class="text-right mb-0"><a href="<?php echo esc_url(get_permalink()); ?>" class="text-red-light" title="<?php echo esc_attr(get_the_title()); ?>">Czytam <i class="fa fa-angle-right"></i></a></p>
+                                    <p class="text-right mb-0">
+                                        <a href="<?php echo esc_url(get_permalink()); ?>" class="text-dark bg-yellow py-1 px-2" title="<?php echo esc_attr(get_the_title()); ?>" style="border-radius: 3px;">
+                                            Czytam <i class="fa fa-angle-right"></i>
+                                        </a>
+                                    </p>
                                 </div>
                             </div>
                         </div>
