@@ -24,14 +24,12 @@ $bg_header_image = get_field('background_product');
 
 <section class="py-lg-5 py-4 about-wrap px-4">
     <div class="container">
-
+        <?php
+        while (have_posts()) : the_post();
+            the_content(__('Continue reading <span class="meta-nav">&rarr;</span>', 'senator-wp-theme'));
+        endwhile;
+        ?>
     </div>
 </section>
-
-<?php
-while (have_posts()) : the_post();
-    the_content(__('Continue reading <span class="meta-nav">&rarr;</span>', 'senator-wp-theme'));
-endwhile;
-?>
 
 <?php get_footer(); ?>
