@@ -7,13 +7,15 @@
 
 //Top Menu
 #top-header {
-    @include media-breakpoint-up(xl) {
-        .top-header-menu {
+    .top-header-menu {
+        background-color: #000;
+
+        @include media-breakpoint-up(xl) {
             position: absolute;
             top: 53px;
             width: 100%;
             z-index: 9;
-            background: rgba(0, 0, 0, .4);
+            background-color: rgba(0, 0, 0, .4);
         }
     }
 }
@@ -886,6 +888,7 @@
                 background: $yellow;
             }
         }
+
         &--white {
 
             &:before,
