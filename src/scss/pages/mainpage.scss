@@ -22,7 +22,7 @@
 
 // Swiper hero slider + Navigation
 .main-swiper {
-    height: clamp(100px, 90vh, 600px);
+    height: clamp(100px, 100vh, 600px);
 
     @include media-breakpoint-up(xl) {
         height: 100vh;
