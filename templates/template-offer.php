@@ -38,7 +38,7 @@ endwhile;
                     $subtitle = get_field('wypelnienie_subtitle');
                     $type_system = get_field('rodzaj_systemu');
             ?>
-                    <div class="col-lg-4">
+                    <div class="col-lg-3 mb-3">
                         <a href="<?php echo esc_url(get_permalink()); ?>" class="main-products-slider__item position-relative text-decoration-none d-block" title="<?php echo esc_attr(get_the_title()); ?>">
                             <span class="main-products-slider__item--btn">
                                 <span>Czytam opis ></span>
