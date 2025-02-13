@@ -1,10 +1,10 @@
 require("bootstrap");
 import Swiper from "swiper"
-import { Navigation, Keyboard } from 'swiper/modules'
+import { Navigation, Keyboard, Thumbs } from 'swiper/modules'
 
 
 // Zarejestrowanie modułów
-Swiper.use([Navigation, Keyboard]);
+Swiper.use([Navigation, Keyboard, Thumbs]);
 
 (function () {
   const swiper = new Swiper('.swiper-main-products', {
@@ -63,12 +63,42 @@ Swiper.use([Navigation, Keyboard]);
       }
     }
   })
+  //Gallery single
+  var galleryThumbs = new Swiper('.gallery-thumbs', {
+    spaceBetween: 5,
+    slidesPerView: 4,
+    loop: true,
+    freeMode: true,
+    watchSlidesProgress: true,
+    watchSlidesVisibility: true,
+    watchOverflow: true,
+    observer: true,
+    observeParents: true,
+  });
+
+  var galleryTop = new Swiper('.gallery-slider', {
+    spaceBetween: 10,
+    loop: true,
+    navigation: {
+      nextEl: '.swiper-button-next',
+      prevEl: '.swiper-button-prev',
+    },
+    thumbs: {
+      swiper: galleryThumbs,
+    },
+    observer: true,
+    observeParents: true,
+  });
 
   // Scroll Counter number
   var counted = 0;
-  window.addEventListener('scroll', function () {
 
+  window.addEventListener('scroll', function () {
     var counterElement = document.getElementById('counter');
+
+    // Check if counterElement exists
+    if (!counterElement) return;
+
     var oTop = counterElement.offsetTop - window.innerHeight;
 
     if (counted === 0 && window.scrollY > oTop) {
@@ -92,7 +122,7 @@ Swiper.use([Navigation, Keyboard]);
           if (progress < duration) {
             requestAnimationFrame(animateCount);
           } else {
-            countElement.textContent = countTo; // Ustaw ostateczną wartość
+            countElement.textContent = countTo; // Final value
           }
         }
 

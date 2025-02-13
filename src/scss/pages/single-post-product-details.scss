@@ -62,3 +62,28 @@
         }
     }
 }
+
+//Gallery
+.gallery-button {
+    &__prev,
+    &__next {
+        width: 50px;
+        height: 50px;
+        border: 2px solid $yellow;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        transform: rotate(45deg);
+        cursor: pointer;
+        margin: 0px 20px 0 20px;
+        position: absolute;
+        top: 50%;
+        z-index: 10;
+
+        &::after {
+            font-size: 16px;
+            color: $yellow;
+            transform: rotate(-45deg);
+        }
+    }
+}

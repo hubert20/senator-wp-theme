@@ -268,3 +268,14 @@ function custom_remove_category_base_from_breadcrumbs($links) {
     }
     return $links;
 }
+
+//Custom yellow style senator panel
+function custom_admin_colors() {
+  echo '<style>
+      #adminmenuback { background-color: #1e1e1e !important; }
+      #wpadminbar { background: #fed510; !important; }
+      #adminmenuwrap { background: #fed510; !important; }
+      #adminmenu { background: #fed510; !important; }
+  </style>';
+}
+add_action('admin_head', 'custom_admin_colors');

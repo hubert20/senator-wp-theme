@@ -12,7 +12,7 @@ $bg_header_image = get_field('background_product');
 
 ?>
 <!-- Hero top -->
-<section class="d-flex flex-column align-items-center justify-content-center header-image-defeault mb-4 mb-lg-5" style="background-image: url('<?php echo $bg_header_image; ?>')">
+<section class="d-flex flex-column align-items-center justify-content-center header-image-defeault" style="background-image: url('<?php echo $bg_header_image; ?>')">
     <div class="container">
         <h1 class="playfair-petch-font standard-title-3 fw-bold text-center text-white header-def-title ls-2">
             <?php echo esc_html(get_the_title()); ?>
@@ -24,135 +24,58 @@ $bg_header_image = get_field('background_product');
         ?>
     </div>
 </section>
-<div class="container">
-    <div class="row mb-4 mb-lg-5">
-        <div class="col-lg-6 mb-3 mb-lg-0">
-            <!-- Gallery slider -->
-            <?php if (have_rows('slider')) : ?>
-                <div class="gallery">
-                    <!-- Główna galeria -->
-                    <div class="swiper-container gallery-slider">
-                        <div class="swiper-wrapper">
-                            <?php
-                            while (have_rows('slider')) : the_row();
-                                $image_slider = get_sub_field('image');
-                            ?>
-                                <div class="swiper-slide">
-                                    <img src="<?php echo esc_url($image_slider['sizes']['medium']); ?>" alt="<?php echo esc_attr($image_slider['alt']); ?>" class="img-fluid mx-auto">
-                                </div>
-                            <?php endwhile; ?>
+
+<section class="bg-white py-4 py-lg-5">
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-7 mb-3 mb-lg-0">
+                <!-- Gallery slider -->
+                <?php if (have_rows('slider')) : ?>
+                    <div class="gallery">
+                        <!-- Główna galeria -->
+                        <div class="swiper gallery-slider mb-2">
+                            <div class="swiper-wrapper">
+                                <?php
+                                while (have_rows('slider')) : the_row();
+                                    $image_slider = get_sub_field('image');
+                                ?>
+                                    <div class="swiper-slide">
+                                        <img src="<?php echo esc_url($image_slider['sizes']['large']); ?>" alt="<?php echo esc_attr($image_slider['alt']); ?>" class="img-fluid mx-auto">
+                                    </div>
+                                <?php endwhile; ?>
+                            </div>
+                            <div class="swiper-button-prev gallery-button__prev"></div>
+                            <div class="swiper-button-next gallery-button__next"></div>
                         </div>
-                        <div class="swiper-button-prev"></div>
-                        <div class="swiper-button-next"></div>
-                    </div>
-                    <!-- Miniatury -->
-                    <div class="swiper-container gallery-thumbs">
-                        <div class="swiper-wrapper">
-                            <?php
-                            while (have_rows('slider')) : the_row();
-                                $image_slider = get_sub_field('image');
-                            ?>
-                                <div class="swiper-slide">
-                                    <img src="<?php echo esc_url($image_slider['sizes']['thumbnail']); ?>" alt="<?php echo esc_attr($image_slider['alt']); ?>" class="img-fluid mx-auto">
-                                </div>
-                            <?php endwhile; ?>
+                        <!-- Miniatury -->
+                        <div thumbsSlider="" class="swiper gallery-thumbs">
+                            <div class="swiper-wrapper">
+                                <?php
+                                while (have_rows('slider')) : the_row();
+                                    $image_slider = get_sub_field('image');
+                                ?>
+                                    <div class="swiper-slide d-flex justify-content-center">
+                                        <img src="<?php echo esc_url($image_slider['sizes']['thumbnail']); ?>" alt="<?php echo esc_attr($image_slider['alt']); ?>" class="img-fluid mx-auto">
+                                    </div>
+                                <?php endwhile; ?>
+                            </div>
                         </div>
                     </div>
-                </div>
-            <?php endif; ?>
-            <style>
-                .gallery {
-                    width: 100%;
-                    max-width: 620px;
-                    margin: 40px auto;
-
-                    //メインスライド
-                    &-slider {
-                        width: 100%;
-                        height: auto;
-                        margin: 0 0 10px 0;
-
-                        .swiper-slide {
-                            width: auto;
-                            height: 400px;
-
-                            img {
-                                display: block;
-                                width: auto;
-                                height: 100%;
-                                margin: 0 auto;
-                            }
-                        }
-                    }
-
-                    //サムネイルスライド
-                    &-thumbs {
-                        width: 100%;
-                        padding: 0;
-                        overflow: hidden;
-
-                        .swiper-slide {
-                            ;
-                            width: 100px;
-                            height: 100px;
-                            text-align: center;
-                            overflow: hidden;
-                            opacity: .1;
-
-                            &-active {
-                                opacity: 1;
-                            }
-
-                            img {
-                                width: auto;
-                                height: 100%;
-                            }
-                        }
-                    }
-                }
-            </style>
-
-            <script>
-                //メインスライド
-                var slider = new Swiper('.gallery-slider', {
-                    slidesPerView: 1,
-                    centeredSlides: true,
-                    loop: true,
-                    loopedSlides: 6, //スライドの枚数と同じ値を指定
-                    navigation: {
-                        nextEl: '.swiper-button-next',
-                        prevEl: '.swiper-button-prev',
-                    },
-                });
-
-                //サムネイルスライド
-                var thumbs = new Swiper('.gallery-thumbs', {
-                    slidesPerView: 'auto',
-                    spaceBetween: 10,
-                    centeredSlides: true,
-                    loop: true,
-                    slideToClickedSlide: true,
-                });
-
-                //3系
-                //slider.params.control = thumbs;
-                //thumbs.params.control = slider;
-
-                //4系～
-                slider.controller.control = thumbs;
-                thumbs.controller.control = slider;
-            </script>
-        </div>
-        <div class="col-lg-6">
-            <!-- Descriptions product-->
-            <?php
-            while (have_posts()) : the_post();
-                the_content(__('Continue reading <span class="meta-nav">&rarr;</span>', 'senator-wp-theme'));
-            endwhile;
-            ?>
+                <?php endif; ?>
+            </div>
+            <div class="col-lg-5">
+                <!-- Descriptions product-->
+                <?php
+                while (have_posts()) : the_post();
+                    the_content(__('Continue reading <span class="meta-nav">&rarr;</span>', 'senator-wp-theme'));
+                endwhile;
+                ?>
+            </div>
         </div>
     </div>
+</section>
 
+<div class="container">
     <!-- tabs profil -->
     <ul class="tabs-details-nav nav nav-tabs mt-1 mb-2 mt-lg-4 mb-lg-4 justify-content-center playfair-petch-font" id="pills-tab" role="tablist">
         <!-- Kolory profili nav-tabs -->

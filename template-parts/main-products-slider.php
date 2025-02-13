@@ -1,5 +1,5 @@
 <!-- Slider with products -->
-<section class="main-products-slider p-relative p-4 py-lg-5 bg-white" id="main-products-offer-slider">
+<section class="main-products-slider p-relative p-4 py-lg-5 bg-white ruler-top" id="main-products-offer-slider">
     <h2 class="text-center mb-4 mb-lg-5 playfair-petch-font standard-title-4">
         <span class="d-inline-block icon-text px-4">Systemy drzwi przesuwnych i szaf garderobianych</span>
     </h2>
