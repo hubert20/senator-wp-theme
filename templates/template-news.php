@@ -26,52 +26,67 @@ $bg_header_image = get_field('background_image');
     <div class="container">
         <div class="row justify-content-center">
             <?php
-            $query = new WP_Query(array('category_name' => 'aktualnosci', 'posts_per_page' => 10));
-            if ($query->have_posts()) :
-                while ($query->have_posts()) : $query->the_post();
+            $paged = (get_query_var('paged')) ? get_query_var('paged') : 1;
+            $args = array('category_name' => 'aktualnosci', 'post_type' => 'post', 'posts_per_page' => 9, 'paged' => $paged);
+            $wp_query = new WP_Query($args);
             ?>
-                    <div class="col-lg-4 d-flex mb-3 mb-lg-4">
-                        <div class="list-news__item d-flex flex-column flex-grow-1">
-                            <?php if (has_post_thumbnail($post->ID)) : ?>
-                                <?php
-                                $imgID  = get_post_thumbnail_id($post->ID);
-                                $image  = wp_get_attachment_image_src($imgID, 'news-width', false, '');
-                                $imgAlt = get_post_meta($imgID, '_wp_attachment_image_alt', true);
-                                ?>
-                                <a href="<?php echo esc_url(get_permalink()); ?>" title="<?php echo esc_attr(get_the_title()); ?>" class="d-block">
-                                    <img src="<?php echo $image[0]; ?>" alt="<?php echo $imgAlt; ?>" class="img-fluid main-news__img">
-                                </a>
+            <?php while (have_posts()) : the_post(); ?>
+                <div class="col-lg-4 d-flex mb-3 mb-lg-4">
+                    <div class="list-news__item d-flex flex-column flex-grow-1">
+                        <?php if (has_post_thumbnail($post->ID)) : ?>
+                            <?php
+                            $imgID  = get_post_thumbnail_id($post->ID);
+                            $image  = wp_get_attachment_image_src($imgID, 'news-width', false, '');
+                            $imgAlt = get_post_meta($imgID, '_wp_attachment_image_alt', true);
+                            ?>
+                            <a href="<?php echo esc_url(get_permalink()); ?>" title="<?php echo esc_attr(get_the_title()); ?>" class="d-block">
+                                <img src="<?php echo $image[0]; ?>" alt="<?php echo $imgAlt; ?>" class="img-fluid main-news__img">
+                            </a>
+                        <?php endif; ?>
+                        <div class="p-3 p-lg-4 main-news__item-cnt position-relative d-flex flex-grow-1 flex-column">
+                            <?php if ('post' === get_post_type()) : ?>
+                                <span class="main-news__item-date py-1"><?php echo get_the_date(); ?></span>
                             <?php endif; ?>
-                            <div class="p-3 p-lg-4 main-news__item-cnt position-relative d-flex flex-grow-1 flex-column">
-                                <?php if ('post' === get_post_type()) : ?>
-                                    <span class="main-news__item-date py-1"><?php echo get_the_date(); ?></span>
-                                <?php endif; ?>
-                                <div class="main-news__item-box d-flex flex-column flex-grow-1">
-                                    <p class="main-news__item-title-post playfair-petch-font fw-bold lh-12 flex-grow-1">
-                                        <a href="<?php echo esc_url(get_permalink()); ?>" title="<?php echo esc_attr(get_the_title()); ?>" class="text-dark">
-                                            <?php echo wp_trim_words(get_the_title(), 15, ' [...]'); ?>
-                                        </a>
-                                    </p>
-                                    <p class="text-right mb-0">
-                                        <a href="<?php echo esc_url(get_permalink()); ?>" class="text-dark bg-yellow py-1 px-2" title="<?php echo esc_attr(get_the_title()); ?>" style="border-radius: 3px;">
-                                            Czytam <i class="fa fa-angle-right"></i>
-                                        </a>
-                                    </p>
-                                </div>
+                            <div class="main-news__item-box d-flex flex-column flex-grow-1">
+                                <p class="main-news__item-title-post playfair-petch-font fw-bold lh-12 flex-grow-1">
+                                    <a href="<?php echo esc_url(get_permalink()); ?>" title="<?php echo esc_attr(get_the_title()); ?>" class="text-dark">
+                                        <?php echo wp_trim_words(get_the_title(), 15, ' [...]'); ?>
+                                    </a>
+                                </p>
+                                <p class="text-right mb-0">
+                                    <a href="<?php echo esc_url(get_permalink()); ?>" class="text-dark bg-yellow py-1 px-2" title="<?php echo esc_attr(get_the_title()); ?>" style="border-radius: 3px;">
+                                        Czytam <i class="fa fa-angle-right"></i>
+                                    </a>
+                                </p>
                             </div>
                         </div>
                     </div>
-            <?php endwhile;
-                wp_reset_postdata();
-            endif; ?>
+                </div>
+            <?php endwhile; ?>
+        </div>
+    </div>
+
+    <div class="container">
+        <div class="pagination">
+            <?php
+            echo paginate_links(array(
+                'base' => str_replace(999999999, '%#%', esc_url(get_pagenum_link(999999999))),
+                'total' => $wp_query->max_num_pages,
+                'current' => max(1, get_query_var('paged')),
+                'format' => '?paged=%#%',
+                'show_all' => false,
+                'type' => 'plain',
+                'end_size' => 2,
+                'mid_size' => 1,
+                'prev_next' => true,
+                'prev_text' => sprintf('<i></i> %1$s', __('< Nowsze', 'text-domain')),
+                'next_text' => sprintf('%1$s <i></i>', __('Starsze >', 'text-domain')),
+                'add_args' => false,
+                'add_fragment' => '',
+            ));
+            ?>
         </div>
     </div>
 </section>
-
-<?php
-while (have_posts()) : the_post();
-    the_content(__('Continue reading <span class="meta-nav">&rarr;</span>', 'senator-wp-theme'));
-endwhile;
-?>
 
 <?php get_footer(); ?>

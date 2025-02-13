@@ -5,7 +5,7 @@ if (!defined('ABSPATH')) exit;
 
 get_header();
 
-$bg_header_image = get_field('background_product');
+$bg_header_image = get_field('background_image');
 
 ?>
 <!-- Hero top -->
