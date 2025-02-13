@@ -5,7 +5,7 @@ if (!defined('ABSPATH')) exit;
 
 get_header();
 
-$bg_header_image = get_field('background_product');
+$bg_header_image = get_field('background_image');
 
 ?>
 <!-- Hero top -->
@@ -30,8 +30,8 @@ $bg_header_image = get_field('background_product');
             if ($query->have_posts()) :
                 while ($query->have_posts()) : $query->the_post();
             ?>
-                    <div class="col-lg-4">
-                        <div class="list-news__item d-flex flex-column">
+                    <div class="col-lg-4 d-flex mb-3 mb-lg-4">
+                        <div class="list-news__item d-flex flex-column flex-grow-1">
                             <?php if (has_post_thumbnail($post->ID)) : ?>
                                 <?php
                                 $imgID  = get_post_thumbnail_id($post->ID);
@@ -42,7 +42,7 @@ $bg_header_image = get_field('background_product');
                                     <img src="<?php echo $image[0]; ?>" alt="<?php echo $imgAlt; ?>" class="img-fluid main-news__img">
                                 </a>
                             <?php endif; ?>
-                            <div class="p-3 p-lg-4 main-news__item-cnt position-relative d-flex flex-grow-1 flex-column bg-white">
+                            <div class="p-3 p-lg-4 main-news__item-cnt position-relative d-flex flex-grow-1 flex-column">
                                 <?php if ('post' === get_post_type()) : ?>
                                     <span class="main-news__item-date py-1"><?php echo get_the_date(); ?></span>
                                 <?php endif; ?>
