@@ -15,7 +15,9 @@ $bg_header_image = get_field('background_product');
 <section class="d-flex flex-column align-items-center justify-content-center header-image-defeault">
     <div class="container">
         <h2 class="playfair-petch-font standard-title-3 fw-bold text-center text-white header-def-title ls-2">
-            Aktualności
+            <span class="d-inline-block icon-text icon-text--white px-4">
+                Aktualności
+            </span>
         </h2>
         <?php
         if (function_exists('yoast_breadcrumb')) {
