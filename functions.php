@@ -150,9 +150,9 @@ add_filter('image_size_names_choose', 'wpmudev_custom_image_sizes');
 
 function wpmudev_custom_image_sizes($sizes)
 {
-    return array_merge($sizes, array(
-        'news-width' => __('News Width')
-    ));
+  return array_merge($sizes, array(
+    'news-width' => __('News Width')
+  ));
 }
 
 add_filter('body_class', 'add_category_to_single');
@@ -245,32 +245,47 @@ add_filter('widget_text', 'do_shortcode');
 // Remove <p> in block Contact form 7
 add_filter('wpcf7_autop_or_not', '__return_false');
 
-add_filter( 'single_template', function( $single ) {
+add_filter('single_template', function ($single) {
   global $post;
 
-  if ( in_category( 'szafy-przesuwne', $post ) ) {
-      if ( file_exists( get_template_directory() . '/single-product-details.php' ) ) {
-          return get_template_directory() . '/single-product-details.php';
+  if (!$post) {
+      return $single;
+  }
+
+  $templates = [
+      'szafy-przesuwne' => 'single-product-details.php',
+      'aktualnosci' => 'single-news.php',
+  ];
+
+  foreach ($templates as $category => $template) {
+      if (in_category($category, $post)) {
+          $template_path = locate_template($template);
+          if ($template_path) {
+              return $template_path;
+          }
       }
   }
 
   return $single;
 });
 
+
 add_filter('wpseo_breadcrumb_links', 'custom_remove_category_base_from_breadcrumbs');
 
-function custom_remove_category_base_from_breadcrumbs($links) {
-    foreach ($links as &$link) {
-        if (strpos($link['url'], '/category/') !== false) {
-            // Usuń fragment 'category' z URL
-            $link['url'] = str_replace('/category/', '/', $link['url']);
-        }
+function custom_remove_category_base_from_breadcrumbs($links)
+{
+  foreach ($links as &$link) {
+    if (strpos($link['url'], '/category/') !== false) {
+      // Usuń fragment 'category' z URL
+      $link['url'] = str_replace('/category/', '/', $link['url']);
     }
-    return $links;
+  }
+  return $links;
 }
 
 //Custom yellow style senator panel
-function custom_admin_colors() {
+function custom_admin_colors()
+{
   echo '<style>
       #adminmenuback { background-color: #1e1e1e !important; }
       #wpadminbar { background: #fed510; !important; }
