@@ -128,12 +128,16 @@ $bg_header_image = get_field('background_product');
                         $title_filling = get_sub_field('title');
                         $image_filling = get_sub_field('image');
                     ?>
-                        <div class="col-lg-2 text-center">
-                            <div class="filling-profil__item text-center mb-2 p-2">
-                                <?php if ($image_filling) : ?>
-                                    <img src="<?php echo $image_filling['url']; ?>" alt="<?php echo $image_filling['alt']; ?>" class="img-fluid mx-auto mb-2">
-                                <?php endif; ?>
-                                <p class="mb-0"><?php echo $title_filling; ?></p>
+                        <div class="col-4 col-md-2 text-center d-flex">
+                            <div class="row justify-content-center flex-grow-1 flex-column align-items-center">
+                                <div class="col-lg-10 text-center mb-2 d-flex flex-grow-1 flex-column">
+                                    <div class="filling-profil__item text-center mb-2 p-2 bg-white flex-grow-1">
+                                        <?php if ($image_filling) : ?>
+                                            <img src="<?php echo $image_filling['url']; ?>" alt="<?php echo $image_filling['alt']; ?>" class="img-fluid mx-auto mb-2">
+                                        <?php endif; ?>
+                                        <p class="mb-0 lh-12"><?php echo $title_filling; ?></p>
+                                    </div>
+                                </div>
                             </div>
                         </div>
                     <?php endwhile; ?>
@@ -145,16 +149,6 @@ $bg_header_image = get_field('background_product');
 
             <!-- Treści/pliki do pobrania -->
 
-        </div>
-    </div>
-
-    <!-- CTA btns -->
-    <div class="row justify-content-center">
-        <div class="col-lg-3 d-grid">
-            <a data-togle="bs-modal" href="#form-box" class="btn btn--style-3" title="Wyślij zapytanie">Zobacz wszystkie systemy SENATOR</a>
-        </div>
-        <div class="col-lg-3 d-grid">
-            <a data-togle="bs-modal" href="#form-box" class="btn btn--style-3" title="Wyślij zapytanie">Wyślij zapytanie</a>
         </div>
     </div>
 </div>
