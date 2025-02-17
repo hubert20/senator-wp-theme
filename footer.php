@@ -35,6 +35,21 @@
                             <span aria-hidden="true"></span>
                         </button>
                         <span class="round-close"></span>
+                        <!-- Right desc form -->
+                        <div>
+                            <p class="text-white">Napisz lub zadzwoń, a by otrzymać wstępną wycenę projektu.</p>
+                            <p class="text-white">Sprzedaż, hurtownia, usługi:</p>
+                            <p class="text-white">
+                                Agnieszka Obiecka<br>
+                                +48 510 261 687<br>
+                                agnieszka.sobiecka@senator.com.pl
+                            </p>
+                            <p class="text-white">
+                                Aleksandra Kędzierska<br>
+                                +48 502 349 822<br>
+                                aleksandra.kedzierska@senator.com.pl
+                            </p>
+                        </div>
                     </div>
                 </div>
             </div>
