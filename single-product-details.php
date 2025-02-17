@@ -105,7 +105,7 @@ $bg_header_image = get_field('background_product');
                         $title_color = get_sub_field('title');
                         $image_color = get_sub_field('image');
                     ?>
-                        <div class="col-4 col-md-2 text-center">
+                        <div class="col-6 col-md-2 text-center">
                             <div class="row justify-content-center">
                                 <div class="col-lg-10 text-center mb-2">
                                     <div class="color-profil__item text-center mb-2 p-2 bg-white">
@@ -130,7 +130,7 @@ $bg_header_image = get_field('background_product');
                         $title_filling = get_sub_field('title');
                         $image_filling = get_sub_field('image');
                     ?>
-                        <div class="col-4 col-md-2 text-center d-flex">
+                        <div class="col-6 col-md-2 text-center d-flex">
                             <div class="row justify-content-center flex-grow-1 flex-column align-items-center">
                                 <div class="col-lg-10 text-center mb-2 d-flex flex-grow-1 flex-column">
                                     <div class="filling-profil__item text-center mb-2 p-2 bg-white flex-grow-1">

@@ -32,3 +32,5 @@
         <p class="text-center text-gray-light mb-0"><small>Senator Copyright 2009-2025</small></p>
     </div>
 </div>
+
+<!-- Float btn -->

@@ -5,14 +5,16 @@ if (!defined('ABSPATH')) exit;
 
 get_header();
 
-$bg_header_image = get_field('background_product');
+$bg_header_image = get_field('background_image');
 
 ?>
 <!-- Hero top -->
 <section class="d-flex flex-column align-items-center justify-content-center header-image-defeault mb-4 mb-lg-5" style="background-image: url('<?php echo $bg_header_image; ?>')">
     <div class="container">
         <h1 class="playfair-petch-font standard-title-3 fw-bold text-center text-white header-def-title ls-2">
-            <?php echo esc_html(get_the_title()); ?>
+            <span class="d-inline-block icon-text icon-text--white px-4">
+                <?php echo esc_html(get_the_title()); ?>
+            </span>
         </h1>
         <?php
         if (function_exists('yoast_breadcrumb')) {
@@ -22,7 +24,7 @@ $bg_header_image = get_field('background_product');
     </div>
 </section>
 
-<section class="py-lg-5 py-4 about-wrap px-4">
+<section class="py-lg-5 py-4 about-wrap bg-white px-4">
     <div class="container">
         <?php
         while (have_posts()) : the_post();
