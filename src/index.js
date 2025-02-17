@@ -185,5 +185,41 @@ Swiper.use([Navigation, Keyboard, Thumbs]);
   if (menuItem) {
     menuItem.setAttribute('data-bs-toggle', 'modal');
     menuItem.setAttribute('data-bs-target', '#offerformModal');
+    menuItem.setAttribute('data-category', 'form-basic');
   }
+
+  //
+  var modal = document.getElementById('offerformModal');
+  if (modal) {
+    modal.addEventListener('shown.bs.modal', function () {
+      var pageTitleField = document.querySelector('#offerformModal input[name="page-title-system"]');
+      if (pageTitleField) {
+        pageTitleField.value = document.title;
+      }
+    });
+  }
+
+  document.querySelectorAll("[data-bs-toggle='modal']").forEach(function (btn) {
+    btn.addEventListener("click", function () {
+      var category = this.getAttribute("data-category"); // Pobranie kategorii z buttona
+
+      if (modal) {
+        setTimeout(function () { // Opóźnienie, aby modal miał czas na załadowanie
+          modal.querySelectorAll("[data-category]").forEach(function (form) {
+            if (form.getAttribute("data-category") === category) {
+              form.style.display = "block"; // Pokazanie odpowiedniego formularza
+            } else {
+              form.style.display = "none"; // Ukrycie innych formularzy
+            }
+          });
+        }, 200); // Można zwiększyć, jeśli CF7 ładuje się z opóźnieniem
+      }
+    });
+  });
+
+
+
+
+
+
 })();

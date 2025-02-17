@@ -75,13 +75,13 @@ $bg_header_image = get_field('background_product');
                 <div class="ps-lg-4">
                     <div class="row justify-content-center">
                         <div class="col-10 col-lg-7 d-grid mb-3">
-                            <a data-bs-toggle="modal" data-bs-target="#offerformModal" class="btn btn btn--style-2">
+                            <a data-category="form-details" data-bs-toggle="modal" data-bs-target="#offerformModal" class="btn btn btn--style-2">
                                 ZŁÓŻ ZAMÓWIENIE <i class="fa fa-check-square-o"></i>
                             </a>
                         </div>
                         <div class="col-10 col-lg-7 d-grid">
                             <a href="/szafy-przesuwne/" class="btn btn--style-3"
-                                title="Zobacz wszystkie systemy szaf przesuwnych SENATOR"> 
+                                title="Zobacz wszystkie systemy szaf przesuwnych SENATOR">
                                 WSZYSTKIE SYSTEMY SENATOR <i class="fa fa-angle-right"></i>
                             </a>
                         </div>
@@ -164,9 +164,24 @@ $bg_header_image = get_field('background_product');
         </div>
         <!-- Materiały do pobrania tab-content -->
         <div class="tab-pane fade config-profil" id="config-profil" role="tabpanel" aria-labelledby="config-profil-tab">
-
             <!-- Treści/pliki do pobrania -->
-
+            <?php if (have_rows('materialy')) : ?>
+                <div class="row justify-content-center">
+                    <?php
+                    while (have_rows('materialy')) : the_row();
+                        $file = get_sub_field('plik_do_pobrania');
+                        $titlefile = get_sub_field('tytul_pliku');
+                    ?>
+                        <?php if ($file) : ?>
+                            <div class="col-lg-3 d-grid mb-3 mb-lg-0">
+                                <a class="btn btn btn--style-2" href="<?php echo $file['url']; ?>" target="_blank" title="<?php echo $titlefile; ?>" download>
+                                    <?php echo $titlefile; ?> <i class="fa fa-download"></i>
+                                </a>
+                            </div>
+                        <?php endif; ?>
+                    <?php endwhile; ?>
+                </div>
+            <?php endif; ?>
         </div>
     </div>
 </div>

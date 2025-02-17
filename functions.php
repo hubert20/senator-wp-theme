@@ -249,21 +249,21 @@ add_filter('single_template', function ($single) {
   global $post;
 
   if (!$post) {
-      return $single;
+    return $single;
   }
 
   $templates = [
-      'szafy-przesuwne' => 'single-product-details.php',
-      'aktualnosci' => 'single-news.php',
+    'szafy-przesuwne' => 'single-product-details.php',
+    'aktualnosci' => 'single-news.php',
   ];
 
   foreach ($templates as $category => $template) {
-      if (in_category($category, $post)) {
-          $template_path = locate_template($template);
-          if ($template_path) {
-              return $template_path;
-          }
+    if (in_category($category, $post)) {
+      $template_path = locate_template($template);
+      if ($template_path) {
+        return $template_path;
       }
+    }
   }
 
   return $single;
@@ -294,10 +294,3 @@ function custom_admin_colors()
   </style>';
 }
 add_action('admin_head', 'custom_admin_colors');
-
-
-// Add title page to form Contact form 7
-function cf7_get_page_title() {
-  return get_the_title();
-}
-add_shortcode('page_title', 'cf7_get_page_title');

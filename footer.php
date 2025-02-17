@@ -21,11 +21,11 @@
                     <div class="col-lg-6 offerformModal__left-bg bg-white">
                         <div class="p-4">
                             <!-- Formulrz ogólny -->
-                            <div data-category="form-basic" class="">
+                            <div data-category="form-basic" style="display: none;">
                                 <?php echo apply_shortcodes('[contact-form-7 id="f5ee6a9" title="Zapytanie"]'); ?>
                             </div>
                             <!-- Formularz z podstrony oferty -->
-                            <div data-category="form-details" class="">
+                            <div data-category="form-details" style="display: none;">
                                 <?php echo apply_shortcodes('[contact-form-7 id="3a2093a" title="Zapytanie z podstrony oferty"]'); ?>
                             </div>
                         </div>
@@ -36,8 +36,8 @@
                         </button>
                         <span class="round-close"></span>
                         <!-- Right desc form -->
-                        <div>
-                            <p class="text-white">Napisz lub zadzwoń, a by otrzymać wstępną wycenę projektu.</p>
+                        <div class="p-3 d-flex flex-column align-items-end text-end justify-content-end w-100">
+                            <p class="text-white mb-2 fw-bold fs-20">Napisz lub zadzwoń, <br> a by otrzymać wstępną wycenę projektu.</p>
                             <p class="text-white">Sprzedaż, hurtownia, usługi:</p>
                             <p class="text-white">
                                 Agnieszka Obiecka<br>
