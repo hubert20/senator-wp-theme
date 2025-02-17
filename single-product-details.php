@@ -72,6 +72,22 @@ $bg_header_image = get_field('background_product');
                     the_content(__('Continue reading <span class="meta-nav">&rarr;</span>', 'senator-wp-theme'));
                 endwhile;
                 ?>
+                <div class="ps-lg-4">
+                    <div class="row justify-content-center">
+                        <div class="col-10 col-lg-7 d-grid mb-3">
+                            <a data-bs-toggle="modal" data-bs-target="#offerformModal" class="btn btn btn--style-2">
+                                ZŁÓŻ ZAMÓWIENIE <i class="fa fa-check-square-o"></i>
+                            </a>
+                        </div>
+                        <div class="col-10 col-lg-7 d-grid">
+                            <a href="/szafy-przesuwne/" class="btn btn--style-3"
+                                title="Zobacz wszystkie systemy szaf przesuwnych SENATOR"> 
+                                WSZYSTKIE SYSTEMY SENATOR <i class="fa fa-angle-right"></i>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+
             </div>
         </div>
     </div>
