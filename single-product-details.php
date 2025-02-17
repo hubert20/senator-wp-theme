@@ -90,7 +90,7 @@ $bg_header_image = get_field('background_product');
         </li>
         <!-- Konfiguracje nav-tabs -->
         <li class="nav-item p-1 p-lg-0 col">
-            <a class="nav-link text-center" id="config-profil-tab" data-bs-toggle="pill" href="#config-profil" role="tab" aria-controls="config-profil" aria-selected="false">Konfiguracje</a>
+            <a class="nav-link text-center" id="config-profil-tab" data-bs-toggle="pill" href="#config-profil" role="tab" aria-controls="config-profil" aria-selected="false">Materiały do pobrania</a>
         </li>
     </ul>
 
@@ -146,7 +146,7 @@ $bg_header_image = get_field('background_product');
                 </div>
             <?php endif; ?>
         </div>
-        <!-- Konfiguracje tab-content -->
+        <!-- Materiały do pobrania tab-content -->
         <div class="tab-pane fade config-profil" id="config-profil" role="tabpanel" aria-labelledby="config-profil-tab">
 
             <!-- Treści/pliki do pobrania -->

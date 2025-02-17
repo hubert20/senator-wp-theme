@@ -20,7 +20,10 @@
                 <div class="d-flex">
                     <div class="col-lg-6 offerformModal__left-bg bg-white">
                         <div class="p-4">
+                            <!-- Formulrz ogólny -->
                             <?php echo apply_shortcodes('[contact-form-7 id="f5ee6a9" title="Zapytanie"]'); ?>
+                            <!-- Formularz z podstrony oferty -->
+                            <?php echo apply_shortcodes('[contact-form-7 id="3a2093a" title="Zapytanie z podstrony oferty"]'); ?>
                         </div>
                     </div>
                     <div class="col-lg-6 d-none d-lg-flex offerformModal__right-bg">

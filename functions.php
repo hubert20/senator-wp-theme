@@ -294,3 +294,10 @@ function custom_admin_colors()
   </style>';
 }
 add_action('admin_head', 'custom_admin_colors');
+
+
+// Add title page to form Contact form 7
+function cf7_get_page_title() {
+  return get_the_title();
+}
+add_shortcode('page_title', 'cf7_get_page_title');
