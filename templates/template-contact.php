@@ -42,7 +42,7 @@ $bg_header_image = get_field('background_image');
         </h2>
         <div class="row justify-content-center">
             <div class="col-10 col-lg-3 d-grid">
-                <a data-bs-toggle="modal" data-bs-target="#offerformModal" class="btn btn btn--style-2">WYŚLIJ ZAPYTANIE <i class="fa fa-check-square-o"></i></a>
+                <a data-category="form-basic" data-bs-toggle="modal" data-bs-target="#offerformModal" class="btn btn btn--style-2">WYŚLIJ ZAPYTANIE <i class="fa fa-check-square-o"></i></a>
             </div>
         </div>
     </div>

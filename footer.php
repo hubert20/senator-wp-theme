@@ -37,17 +37,21 @@
                         <span class="round-close"></span>
                         <!-- Right desc form -->
                         <div class="p-3 d-flex flex-column align-items-end text-end justify-content-end w-100">
-                            <p class="text-white mb-2 fw-bold fs-20">Napisz lub zadzwoń, <br> a by otrzymać wstępną wycenę projektu.</p>
+                            <p class="text-white mb-2 fw-bold fs-20">Wypełnij formularz lub zadzwoń, <br> a by otrzymać wstępną wycenę projektu.</p>
                             <p class="text-white">Sprzedaż, hurtownia, usługi:</p>
                             <p class="text-white">
-                                Agnieszka Obiecka<br>
+                                <strong>Agnieszka Obiecka</strong><br>
                                 +48 510 261 687<br>
-                                agnieszka.sobiecka@senator.com.pl
+                                <a href="mailto:agnieszka.sobiecka@senator.com.pl" title="agnieszka.sobiecka@senator.com.pl" class="text-yellow">
+                                    agnieszka.sobiecka@senator.com.pl
+                                </a>
                             </p>
                             <p class="text-white">
-                                Aleksandra Kędzierska<br>
+                                <strong>Aleksandra Kędzierska</strong><br>
                                 +48 502 349 822<br>
-                                aleksandra.kedzierska@senator.com.pl
+                                <a href="mailto:agnieszka.sobiecka@senator.com.pl" title="agnieszka.sobiecka@senator.com.pl" class="text-yellow">
+                                    aleksandra.kedzierska@senator.com.pl
+                                </a>
                             </p>
                         </div>
                     </div>
