@@ -34,7 +34,7 @@ $bg_header_image = get_field('background_product');
                 <span class="text-yellow py-1 text-gray bg-dark-mark"><?php echo get_the_date(); ?></span>
             <?php endif; ?>
         </div>
-        <h1 class="playfair-petch-font standard-title-4 fw-bold text-center header-def-title lh-1 mb-3 mb-lg-4 text-yellow">
+        <h1 class="playfair-petch-font standard-title-4 fw-bold text-center header-def-title lh-1 mb-3 mb-lg-4">
             <?php echo esc_html(get_the_title()); ?>
         </h1>
         <hr class="mb-3 mb-lg-4">
