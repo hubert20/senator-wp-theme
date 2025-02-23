@@ -9,6 +9,7 @@ Template Post Type: post
 get_header();
 
 $bg_header_image = get_field('background_product');
+$image_config = get_field('konfiguracje');
 
 ?>
 <!-- Hero top -->
@@ -95,7 +96,7 @@ $bg_header_image = get_field('background_product');
 
 <div class="container">
     <!-- tabs profil -->
-    <ul class="tabs-details-nav nav nav-tabs mt-1 mb-2 mt-lg-4 mb-lg-4 justify-content-center playfair-petch-font" id="pills-tab" role="tablist">
+    <ul class="tabs-details-nav nav nav-tabs mt-1 mb-2 mt-lg-4 mb-lg-5 justify-content-center playfair-petch-font" id="pills-tab" role="tablist">
         <!-- Kolory profili nav-tabs -->
         <li class="nav-item p-1 p-lg-0 col">
             <a class="nav-link text-center active" id="color-profil-tab" data-bs-toggle="pill" href="#color-profil" role="tab" aria-controls="color-profil" aria-selected="true">Kolory profili</a>
@@ -104,9 +105,13 @@ $bg_header_image = get_field('background_product');
         <li class="nav-item p-1 p-lg-0 col">
             <a class="nav-link text-center" id="filling-profil-tab" data-bs-toggle="pill" href="#filling-profil" role="tab" aria-controls="filling-profil" aria-selected="false">Wypełnienia profili</a>
         </li>
-        <!-- Konfiguracje nav-tabs -->
+        <!-- Materiały do pobrania nav-tabs -->
         <li class="nav-item p-1 p-lg-0 col">
-            <a class="nav-link text-center" id="config-profil-tab" data-bs-toggle="pill" href="#config-profil" role="tab" aria-controls="config-profil" aria-selected="false">Materiały do pobrania</a>
+            <a class="nav-link text-center" id="materials-profil-tab" data-bs-toggle="pill" href="#materials-profil" role="tab" aria-controls="materials-profil" aria-selected="false">Materiały do pobrania</a>
+        </li>
+        <!-- Wybrane konfiguracje nav-tabs -->
+        <li class="nav-item p-1 p-lg-0 col">
+            <a class="nav-link text-center" id="config-profil-tab" data-bs-toggle="pill" href="#config-profil" role="tab" aria-controls="config-profil" aria-selected="false">Wybrane konfiguracje</a>
         </li>
     </ul>
 
@@ -163,7 +168,7 @@ $bg_header_image = get_field('background_product');
             <?php endif; ?>
         </div>
         <!-- Materiały do pobrania tab-content -->
-        <div class="tab-pane fade config-profil" id="config-profil" role="tabpanel" aria-labelledby="config-profil-tab">
+        <div class="tab-pane fade materials-profil" id="materials-profil" role="tabpanel" aria-labelledby="materials-profil-tab">
             <!-- Treści/pliki do pobrania -->
             <?php if (have_rows('materialy')) : ?>
                 <div class="row justify-content-center">
@@ -182,6 +187,17 @@ $bg_header_image = get_field('background_product');
                     <?php endwhile; ?>
                 </div>
             <?php endif; ?>
+        </div>
+        <!-- Konfiguracje tab-content -->
+        <div class="tab-pane fade config-profil" id="config-profil" role="tabpanel" aria-labelledby="config-profil-tab">
+            <!-- Wybrane konfiguracje -->
+            <div class="row justify-content-center">
+                <div class="col-lg-10 text-center">
+                    <?php if ($image_config) : ?>
+                        <img src="<?php echo $image_config['url']; ?>" alt="<?php echo $image_config['alt']; ?>" class="img-fluid mx-auto">
+                    <?php endif; ?>
+                </div>
+            </div>
         </div>
     </div>
 </div>

@@ -61,6 +61,23 @@
     </div>
 </div>
 
+
+<!-- Modal Film -->
+<div class="modal modal-video fade" id="ModalVideo" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered align-items-center modal-xl" role="document">
+        <div class="modal-content border-0">
+            <div class="modal-body">
+                <button type="button" class="btn-close btn-close-white close-video" data-bs-dismiss="modal" aria-label="Close" title="Zamknij film"></button>
+                <!-- 16:9 aspect ratio -->
+                <div class="ratio ratio-16x9">
+                    <iframe class="embed-responsive-item" src="" id="video" allowscriptaccess="always" allow="autoplay"></iframe>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+
 <footer class="site-footer" role="contentinfo">
     <?php get_template_part('footer-widget'); ?>
 </footer>

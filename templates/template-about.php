@@ -32,6 +32,14 @@ $bg_header_image = get_field('background_image');
     ?>
 </section>
 
+<section class="video-box position-relative">
+    <a role="button" type="button" id="video-sg" class="video-btn btn-block pulse-animation pulse-animation--lg pulse-animation--center position-relative" title="" data-bs-toggle="modal" data-bs-target="#ModalVideo" data-src="">
+        <span class="video-btn"><i class="fa fa-play"></i></span>
+        <span class="video-pattern"></span>
+        <img src="/wp-content/uploads/2025/02/film-produkcja-senator-min.jpg" class="img-fluid box-style-dark" alt="Produikcja profili SENATOR" style="width: 100vw">
+    </a>
+</section>
+
 <section class="py-4 py-lg-5 bg-black">
     <div class="container">
         <h2 class="subtitle playfair-petch-font text-center standard-title-4 fw-bolder mb-3 mb-lg-4 position-relative text-yellow">
