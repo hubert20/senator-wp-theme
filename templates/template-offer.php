@@ -31,6 +31,7 @@ endwhile;
 ?>
 
 <section class="py-lg-5 py-4 offer-wrap px-4 ruler-top">
+    <div class="mt-3 mt-lg-5"></div>
     <div class="container-fluid">
         <div class="row justify-content-center">
             <?php

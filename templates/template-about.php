@@ -9,7 +9,7 @@ $bg_header_image = get_field('background_image');
 
 ?>
 <!-- Hero top -->
-<section class="d-flex flex-column align-items-center justify-content-center header-image-defeault mb-4 mb-lg-5" style="background-image: url('<?php echo $bg_header_image; ?>')">
+<section class="d-flex flex-column align-items-center justify-content-center header-image-defeault" style="background-image: url('<?php echo $bg_header_image; ?>')">
     <div class="container">
         <h1 class="playfair-petch-font standard-title-3 fw-bold text-center text-white header-def-title ls-2">
             <span class="d-inline-block icon-text icon-text--white px-4">
@@ -24,7 +24,8 @@ $bg_header_image = get_field('background_image');
     </div>
 </section>
 
-<section class="pt-lg-5 pt-4 about-wrap bg-white">
+<section class="pt-lg-5 pt-4 about-wrap bg-white ruler-top">
+    <div class="mt-3 mt-lg-5"></div>
     <?php
     while (have_posts()) : the_post();
         the_content(__('Continue reading <span class="meta-nav">&rarr;</span>', 'senator-wp-theme'));

@@ -253,8 +253,8 @@
                 align-items: center;
                 justify-content: center;
                 padding: 15px;
-                width: clamp(5rem, 4.5rem + 2.5vw, 8.5rem);
-                height: clamp(5rem, 4.5rem + 2.5vw, 8.5rem);
+                width: clamp(5rem, 4.5rem + 3.5vw, 8.5rem);
+                height: clamp(5rem, 4.5rem + 3.5vw, 8.5rem);
                 line-height: 1.2;
                 border-radius: 50%;
                 border: 0;
@@ -342,6 +342,10 @@
 
     &__item-title-post {
         font-size: 22px;
+    }
+
+    &__img {
+        border-bottom: 6px solid $yellow;
     }
 }
 

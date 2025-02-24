@@ -25,7 +25,7 @@ $bg_header_image = get_field('background_image');
     </div>
 </section>
 
-<section class="py-lg-5 py-4 bg-white px-4 ruler-top">
+<section class="py-lg-5 py-4 bg-white ruler-top">
     <div class="container">
         <?php
         while (have_posts()) : the_post();
