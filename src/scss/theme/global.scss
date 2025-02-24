@@ -693,7 +693,7 @@
     position: absolute;
     left: 0;
     top: 0;
-    background-color: rgba(0,0,0,.5);
+    background-color: rgba(0, 0, 0, .5);
 }
 
 
@@ -961,4 +961,8 @@
 //Article images
 .round-rigt-article {
     border-radius: 0% 50% 0% 0%;
+}
+
+.fs-20 {
+    font-size: 18px;
 }
