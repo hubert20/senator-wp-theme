@@ -27,7 +27,7 @@ $bg_header_image = get_field('background_product');
     </div>
 </section>
 
-<section class="py-4 py-lg-5 container-news">
+<section class="py-4 py-lg-5 container-news ruler-top">
     <div class="container">
         <div class="text-center mb-2">
             <?php if ('post' === get_post_type()) : ?>

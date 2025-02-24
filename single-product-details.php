@@ -28,7 +28,7 @@ $image_config = get_field('konfiguracje');
     </div>
 </section>
 
-<section class="bg-white py-4 py-lg-5">
+<section class="bg-white py-4 py-lg-5 ruler-top">
     <div class="container">
         <div class="row">
             <div class="col-lg-7 mb-3 mb-lg-0">
