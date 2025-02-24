@@ -18,7 +18,7 @@
                     <?php dynamic_sidebar('footer-start'); ?>
                 <?php endif; ?>
             </div>
-            <div class="col-lg-4">
+            <div class="col-lg-3">
                 <h5 class="text-yellow standard-title-7 playfair-petch-font mb-2 mb-lg-4 fw-bold">Informacje</h5>
                 <?php if (is_active_sidebar('menu-services')) : ?>
                     <?php dynamic_sidebar('menu-services'); ?>
