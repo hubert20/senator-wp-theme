@@ -18,7 +18,7 @@
         <div class="modal-content">
             <div class="modal-body p-0" id="modal-form">
                 <div class="d-flex">
-                    <div class="col-lg-6 offerformModal__left-bg bg-white">
+                    <div class="col-lg-6 offerformModal__left-bg bg-white position-relative">
                         <div class="p-4">
                             <!-- Formulrz ogólny -->
                             <div data-category="form-basic" style="display: none;">
@@ -31,10 +31,6 @@
                         </div>
                     </div>
                     <div class="col-lg-6 d-none d-lg-flex offerformModal__right-bg">
-                        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close">
-                            <span aria-hidden="true"></span>
-                        </button>
-                        <span class="round-close"></span>
                         <!-- Right desc form -->
                         <div class="p-3 d-flex flex-column align-items-end text-end justify-content-end w-100">
                             <p class="text-white mb-2 fw-bold fs-20">Wypełnij formularz lub zadzwoń, <br> a by otrzymać wstępną wycenę projektu.</p>
@@ -55,6 +51,11 @@
                             </p>
                         </div>
                     </div>
+                    <!-- Close btn -->
+                    <button type="button" class="btn-close btn-close-mobile" data-bs-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true"></span>
+                    </button>
+                    <span class="round-close d-none d-lg-inline-block"></span>
                 </div>
             </div>
         </div>
