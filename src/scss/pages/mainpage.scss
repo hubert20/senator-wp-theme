@@ -52,8 +52,14 @@
         cursor: pointer;
         margin: 30px 30px 0 30px;
         position: absolute;
-        top: 50%;
         z-index: 10;
+        top: auto;
+        bottom: 10%;
+
+        @include media-breakpoint-up(lg) {
+            top: 50%;
+            bottom: auto;
+        }
 
         &::after {
             font-size: 16px;
