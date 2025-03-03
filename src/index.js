@@ -218,8 +218,4 @@ Swiper.use([Navigation, Keyboard, Thumbs]);
   });
 
 
-
-
-
-
 })();
