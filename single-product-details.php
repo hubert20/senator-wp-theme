@@ -88,7 +88,6 @@ $image_config = get_field('konfiguracje');
                         </div>
                     </div>
                 </div>
-
             </div>
         </div>
     </div>
@@ -96,7 +95,7 @@ $image_config = get_field('konfiguracje');
 
 <div class="container">
     <!-- tabs profil -->
-    <ul class="tabs-details-nav nav nav-tabs mt-1 mb-2 mt-lg-4 mb-lg-5 justify-content-center playfair-petch-font" id="pills-tab" role="tablist">
+    <ul class="tabs-details-nav nav nav-tabs mt-1 mb-4 mt-lg-4 mb-lg-5 justify-content-center playfair-petch-font" id="pills-tab" role="tablist">
         <!-- Kolory profili nav-tabs -->
         <li class="nav-item p-1 p-lg-0 col">
             <a class="nav-link text-center active" id="color-profil-tab" data-bs-toggle="pill" href="#color-profil" role="tab" aria-controls="color-profil" aria-selected="true">Kolory profili</a>
