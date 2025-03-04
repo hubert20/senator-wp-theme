@@ -256,20 +256,29 @@
             transform: scale(0.8) translateY(30px) rotate(45deg);
             transition: all 0.35s cubic-bezier(0, 0, 0.2, 1);
             background-color: rgba(255, 255, 255, .8);
-            width: clamp(5rem, 4.5rem + 2.5vw, 8.5rem);
-            height: clamp(5rem, 4.5rem + 2.5vw, 8.5rem);
+            width: clamp(6rem, 4.5rem + 2.5vw, 8.5rem);
+            height: clamp(6rem, 4.5rem + 2.5vw, 8.5rem);
+
+            @include media-breakpoint-up(lg) {
+                width: clamp(5rem, 4.5rem + 2.5vw, 8.5rem);
+                height: clamp(5rem, 4.5rem + 2.5vw, 8.5rem);
+            }
 
             &>span {
                 display: flex;
                 align-items: center;
                 justify-content: center;
-                padding: 15px;
+                padding: 3px;
                 line-height: 1.2;
                 border: 0;
                 font-weight: 600;
                 color: #000;
                 transition: all 0.3s linear;
                 transform: rotate(-45deg);
+
+                @include media-breakpoint-up(lg) {
+                    padding: 15px;
+                }
             }
 
         }
