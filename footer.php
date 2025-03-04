@@ -13,7 +13,7 @@
 
 
 <!-- Offer form Modal -->
-<div class="modal fade offerformModal" id="offerformModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+<div class="modal fade offerformModal" id="offerformModal" tabindex="-1" aria-labelledby="exampleModalLabel">
     <div class="modal-dialog modal-lg modal-dialog-centered">
         <div class="modal-content">
             <div class="modal-body p-0" id="modal-form">
