@@ -37,16 +37,16 @@
                             <p class="text-white">Sprzedaż, hurtownia, usługi:</p>
                             <p class="text-white">
                                 <strong>Agnieszka Sobiecka</strong><br>
-                                +48 510 261 687<br>
+                                <i class="fa fa-phone"></i> +48 510 261 687<br>
                                 <a href="mailto:agnieszka.sobiecka@senator.com.pl" title="agnieszka.sobiecka@senator.com.pl" class="text-yellow">
-                                    agnieszka.sobiecka@senator.com.pl
+                                <i class="fa fa-envelope"></i> agnieszka.sobiecka@senator.com.pl
                                 </a>
                             </p>
                             <p class="text-white">
                                 <strong>Aleksandra Kędzierska</strong><br>
-                                +48 502 349 822<br>
+                                <i class="fa fa-phone"></i> +48 502 349 822<br>
                                 <a href="mailto:agnieszka.sobiecka@senator.com.pl" title="agnieszka.sobiecka@senator.com.pl" class="text-yellow">
-                                    aleksandra.kedzierska@senator.com.pl
+                                <i class="fa fa-envelope"></i> aleksandra.kedzierska@senator.com.pl
                                 </a>
                             </p>
                         </div>
