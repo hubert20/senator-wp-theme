@@ -36,7 +36,7 @@
                             <p class="text-white mb-2 fw-bold fs-20">Wypełnij formularz lub zadzwoń, <br> a by otrzymać wstępną wycenę projektu.</p>
                             <p class="text-white">Sprzedaż, hurtownia, usługi:</p>
                             <p class="text-white">
-                                <strong>Agnieszka Obiecka</strong><br>
+                                <strong>Agnieszka Sobiecka</strong><br>
                                 +48 510 261 687<br>
                                 <a href="mailto:agnieszka.sobiecka@senator.com.pl" title="agnieszka.sobiecka@senator.com.pl" class="text-yellow">
                                     agnieszka.sobiecka@senator.com.pl
