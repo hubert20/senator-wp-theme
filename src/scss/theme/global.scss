@@ -6,19 +6,24 @@
 }
 
 //Top Menu
+// Top Menu
 #top-header {
-    .top-header-menu {
-        background-color: #000;
+  .top-header-menu {
+    background-color: #000;
 
-        @include media-breakpoint-up(xl) {
-            position: absolute;
-            top: 53px;
-            width: 100%;
-            z-index: 9;
-            background-color: rgba(0, 0, 0, .4);
-        }
+    @include media-breakpoint-up(xl) {
+      // Domyślnie bez position dla WooCommerce
+      body:not(.woocommerce):not(.page-template-template-cart):not(.page-template-template-order) & {
+        position: absolute;
+        top: 53px;
+        width: 100%;
+        z-index: 9;
+        background-color: rgba(0, 0, 0, .4);
+      }
     }
+  }
 }
+
 
 @include media-breakpoint-down(md) {
     .navbar-collapse {

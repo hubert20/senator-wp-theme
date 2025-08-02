@@ -3,6 +3,10 @@
 // ini_set('display_startup_errors', 1);
 // error_reporting(E_ALL);
 
+add_action( 'after_setup_theme', function() {
+  add_theme_support( 'woocommerce' );
+});
+
 /**
  * Enqueue scripts and styles.
  */
@@ -283,14 +287,7 @@ function custom_remove_category_base_from_breadcrumbs($links)
   return $links;
 }
 
-//Custom yellow style senator panel
-// function custom_admin_colors()
-// {
-//   echo '<style>
-//       #adminmenuback { background-color: #1e1e1e !important; }
-//       #wpadminbar { background: #fed510; !important; }
-//       #adminmenuwrap { background: #fed510; !important; }
-//       #adminmenu { background: #fed510; !important; }
-//   </style>';
-// }
-// add_action('admin_head', 'custom_admin_colors');
+add_action('wp_head', function() {
+  global $template;
+  echo '<!-- Aktualnie Używany szablon do: ' . basename($template) . ' -->';
+});
