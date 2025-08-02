@@ -35,7 +35,7 @@ $bg_header_image = get_field('background_image');
     </div>
 </section>
 
-<section class="py-4 py-lg-5 bg-black">
+<!-- <section class="py-4 py-lg-5 bg-black">
     <div class="container">
         <h2 class="subtitle playfair-petch-font text-center standard-title-4 fw-bolder mb-3 mb-lg-4 position-relative text-yellow">
             <span class="d-inline-block icon-text icon-text--yellow px-4">Skorzystaj z formularza kontaktowego</span>
@@ -46,7 +46,7 @@ $bg_header_image = get_field('background_image');
             </div>
         </div>
     </div>
-</section>
+</section> -->
 
 <!-- Mapa google -->
 <section>

@@ -76,9 +76,12 @@ $image_config = get_field('konfiguracje');
                 <div class="ps-lg-4">
                     <div class="row justify-content-center">
                         <div class="col-10 col-lg-7 d-grid mb-3">
-                            <a data-category="form-details" data-bs-toggle="modal" data-bs-target="#offerformModal" class="btn btn btn--style-2">
-                                ZŁÓŻ ZAMÓWIENIE <i class="fa fa-check-square-o"></i>
+                            <a href="/sklep" class="btn btn btn--style-2">
+                                SKLEP INTERNETOWY <i class="fa fa-check-square-o"></i>
                             </a>
+                            <!-- <a data-category="form-details" data-bs-toggle="modal" data-bs-target="#offerformModal" class="btn btn btn--style-2">
+                                ZŁÓŻ ZAMÓWIENIE <i class="fa fa-check-square-o"></i>
+                            </a> -->
                         </div>
                         <div class="col-10 col-lg-7 d-grid">
                             <a href="/szafy-przesuwne/" class="btn btn--style-3"
