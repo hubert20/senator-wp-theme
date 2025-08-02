@@ -11,7 +11,7 @@ $bg_header_image = get_field('background_image');
 <!-- Hero top -->
 <section class="d-flex flex-column align-items-center justify-content-center header-image-defeault" style="background-image: url('<?php echo $bg_header_image; ?>')">
     <div class="container">
-        <h1 class="playfair-petch-font standard-title-3 fw-bold text-center text-white header-def-title ls-2">
+        <h1 class="z-font standard-title-3 fw-bold text-center text-white header-def-title ls-2">
             <span class="d-inline-block icon-text icon-text--white px-4">
                 <?php echo esc_html(get_the_title()); ?>
             </span>
